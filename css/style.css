@@ -36,9 +36,11 @@ html {
 }
 
 .logo {
-    position: relative;
-    text-align: center;
+    /* position: relative; */
+    text-align: right;
     margin-top: 27px;
+    width: 100%;
+    height: 100%;
 }
 
 /* FLEXBOX */
