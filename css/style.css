@@ -1,0 +1,117 @@
+/* GENERAL */
+* {
+    background: #000;
+    margin: 5px;
+}
+
+#main-header {
+    border-bottom: 3px solid white;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Raleway", sans-serif
+}
+
+body,
+html {
+    height: 100%;
+    line-height: 1.8;
+}
+
+.navButton {
+    /* order: 0; */
+    position: relative;
+    text-align: left;
+    margin-top: 30px;
+    font-size: 35px;
+    cursor: pointer;
+    color: white;
+    padding-bottom: 0px;
+}
+
+.logo {
+    position: relative;
+    text-align: center;
+    margin-top: 27px;
+}
+
+/* FLEXBOX */
+.headercontainer {
+    display: flex;
+    justify-content: flex;
+    /* or inline-flex */
+}
+
+/* BURGER MENU OVERLAY */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    background-color: transparent;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+/* Full height image header
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("/w3images/mac.jpg");
+    min-height: 100%;
+} */
+
+/* .w3-bar .w3-button {
+    padding: 16px;
+} */
