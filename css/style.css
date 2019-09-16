@@ -4,7 +4,7 @@
     margin: 5px;
 }
 
-#main-header {
+.main-header {
     border-bottom: 3px solid white;
 }
 
@@ -26,7 +26,7 @@ html {
     line-height: 1.8;
 }
 
-/* HEADER */
+/* HEADER with Flexbox*/
 .headercontainer {
     display: flex;
     justify-content: space-between;
@@ -114,15 +114,3 @@ html {
         right: 35px;
     }
 }
-
-/* Full height image header
-.bgimg-1 {
-    background-position: center;
-    background-size: cover;
-    background-image: url("/w3images/mac.jpg");
-    min-height: 100%;
-} */
-
-/* .w3-bar .w3-button {
-    padding: 16px;
-} */
