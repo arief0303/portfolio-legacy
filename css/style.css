@@ -1,11 +1,10 @@
 /* GENERAL */
 * {
     background: #000;
-    margin: 5px;
 }
 
 .main-header {
-    border-bottom: 3px solid white;
+    border-bottom: 2px solid white;
 }
 
 body,
@@ -26,20 +25,25 @@ html {
     line-height: 1.8;
 }
 
-/* HEADER with Flexbox*/
+.content {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* HEADER*/
 .headercontainer {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    /* or inline-flex */
 }
 
 .navButton {
     order: 0;
     position: relative;
-    text-align: left;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     font-size: 35px;
     cursor: pointer;
     color: white;
@@ -55,9 +59,9 @@ html {
     height: 100px;
 }
 
-.headerplaceholder {
+/* .headerplaceholder {
     order: 2;
-}
+} */
 
 /* BURGER MENU OVERLAY */
 .overlay {
@@ -113,4 +117,17 @@ html {
         top: 15px;
         right: 35px;
     }
+}
+
+/* CONTENT */
+.title {
+    text-align: left;
+    font: italic bold 45px;
+}
+
+.content {
+    /* margin: 7%; */
+    padding-right: 10%;
+    padding-left: 10%;
+    flex-direction: column;
 }
