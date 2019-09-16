@@ -29,7 +29,7 @@ html {
 /* HEADER */
 .headercontainer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: row;
     align-items: center;
     /* or inline-flex */
@@ -51,8 +51,8 @@ html {
 }
 
 #myLogo {
-    width: 250px;
-    height: 250px;
+    width: 100px;
+    height: 100px;
 }
 
 .headerplaceholder {
