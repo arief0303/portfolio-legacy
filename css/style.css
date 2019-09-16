@@ -37,18 +37,22 @@ html {
     padding-bottom: 0px;
 }
 
-.logo {
-    /* position: relative; */
-    text-align: right;
-    margin-top: 27px;
-    width: 100%;
-    height: 100%;
+.logo{
+    text-align: center;
+}
+
+#myLogo {
+    display: inline-block;
+    width: 10%;
+    height: 10%;
+    /* left: 0px;
+    right: 0px; */
 }
 
 /* FLEXBOX */
 .headercontainer {
-    display: flex;
-    justify-content: flex;
+    /* display: flex;
+    justify-content: flex; */
     /* or inline-flex */
 }
 
