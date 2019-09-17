@@ -23,6 +23,7 @@ html {
     color: white;
     height: 100%;
     line-height: 1.8;
+    margin: 10px;
 }
 
 .content {
@@ -50,7 +51,10 @@ html {
     cursor: pointer;
     color: white;
     padding-bottom: 0px;
+    transition: all 500ms ease;
 }
+
+.navButton:hover{color: #818181;}
 
 .logo {
     order: 1;
