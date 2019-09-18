@@ -4,7 +4,7 @@
 }
 
 .main-header {
-    border-bottom: 2px solid white;
+    border-bottom: 3px solid white;
 }
 
 body,
@@ -15,15 +15,15 @@ h4,
 h5,
 h6,
 p {
-    font-family: "Raleway", sans-serif
+    font-family: "Raleway", sans-serif;
 }
 
 body,
 html {
+    margin: 0px;
     color: white;
     height: 100%;
     line-height: 1.8;
-    margin: 10px;
 }
 
 .content {
@@ -35,7 +35,9 @@ html {
 
 /* HEADER*/
 .headercontainer {
-    padding-left: 00%;
+    /* Implement static navbar that wouldn't fuckup */
+    /* position: fixed; */
+    padding-left: 0%;
     padding-right: 0%;
     display: flex;
     justify-content: space-between;
@@ -44,6 +46,7 @@ html {
 }
 
 .navButton {
+    padding-left: 20px;
     order: 0;
     position: relative;
     /* margin-top: 30px; */
@@ -54,9 +57,13 @@ html {
     transition: all 500ms ease;
 }
 
-.navButton:hover{color: #818181;}
+.navButton:hover {
+    color: #818181;
+}
 
 .logo {
+    padding-right: 20px;
+    margin: 5px;
     order: 1;
 }
 
@@ -65,9 +72,9 @@ html {
     height: 75px;
 }
 
-/* .headerplaceholder {
+.headerplaceholder {
     order: 2;
-} */
+}
 
 /* BURGER MENU OVERLAY */
 .overlay {
@@ -78,7 +85,7 @@ html {
     top: 0;
     left: 0;
     background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.9);
+    /* background-color: rgba(0, 0, 0, 0.9); */
     overflow-x: hidden;
     transition: 0.5s;
 }

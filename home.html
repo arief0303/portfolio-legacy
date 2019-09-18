@@ -35,9 +35,72 @@
 
     <!-- BODY -->
     <!-- <div style="background: crimson;height: 500px;"><h1>Welcome</h1><p>test</p></div> -->
-    
+
     <!-- SCRIPT -->
     <script src="js/main.js"></script>
+
+    <!-- library for three js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.js"></script>
+
+    <!-- library for TweenMax animation plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+    <!-- 3D "*MAGIC*" -->
+    <script>
+        // constructor for scene
+        var scene = new THREE.Scene();
+        // constructor for persperctive camera with 75 FOV, size of browser window, render distance of the near/far plane 0.1 to 1000
+        var camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
+        //set camera position
+        camera.position.z= 5;
+        // constructor for renderer with AA property
+        var renderer = new THREE.WebGLRenderer({antialias: true});
+
+        //background color for renderer
+        renderer.setClearColor("#000000");
+        //size for the renderer based on window width and height
+        renderer.setSize(window.innerWidth,window.innerHeight);
+
+        //call a method to create <canvas> element
+        document.body.appendChild(renderer.domElement);
+
+        //auto resize canvas by listening to window resize event
+        window.addEventListener('resize', () => {
+            renderer.setSize(window.innerWidth,window.innerHeight);
+            //re-adjust camera aspect ratio
+            camera.aspect = window.innerWidth/window.innerHeight;
+            //update camera everytime theres adjustment made
+            camera.updateProjectMatrix();
+        })
+        
+        // SPHERE
+        //define geometry
+        var geometry = new THREE.SphereGeometry(1, 10, 10);
+        //define material
+        var material = new THREE.MeshLambertMaterial({color: 0xFFCC00});
+        //define mesh of a sphere with material
+        var mesh = new THREE.Mesh(geometry,material);
+        //set position
+        mesh.position.set(-2,2,-2);
+        //add mesh to scene
+        scene.add(mesh);
+
+        //OCTAHEDRON
+        // var octahedron = new THREE.OctahedronGeometry(10,4)
+        // var octahedron1 = new THREE.Mesh(octahedron, material)
+        // octahedron1.position.set(0,0,0);
+        // scene.add(octahedron1);
+        // <------------------------------------------------------------------------------CONTINUE ADDING OCTAHEDRON
+
+
+        //lighting (colour, intensity, distance, decay)
+        var light = new THREE.PointLight(0xffffff, 1, 100)
+        light.position.set(15,0,25);
+        scene.add(light);
+
+        //call renderer method on the renderer to show things on the scene
+        renderer.render(scene, camera);
+    </script>
 
 </body>
 
