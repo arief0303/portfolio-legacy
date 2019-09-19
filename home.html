@@ -52,9 +52,9 @@
         // constructor for persperctive camera with 75 FOV, size of browser window, render distance of the near/far plane 0.1 to 1000
         var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         //set camera position
-        camera.position.z = 7;
-        camera.position.y = -3;
-        camera.position.x = 2;
+        camera.position.x = 0;
+        camera.position.y = 0;
+        camera.position.z = 8;
         // constructor for renderer with AA property
         var renderer = new THREE.WebGLRenderer({
             antialias: true
@@ -82,12 +82,14 @@
         var geometry = new THREE.SphereGeometry(1, 10, 500);
         //define material
         var material = new THREE.MeshLambertMaterial({
-            color: 0xff9900
+            color: 0x3399ff
         });
         //define mesh of a sphere with material
         var mesh = new THREE.Mesh(geometry, material);
+        //set scale
+        mesh.scale.set(1.5,1.5,1.5);
         //set position
-        mesh.position.set(-2, 2, -3);
+        mesh.position.set(-3.5, 4, 0);
         //add mesh to scene
         scene.add(mesh);
 
@@ -95,7 +97,7 @@
         var octahedron = new THREE.OctahedronGeometry(1, 0)
         var toscha = new THREE.MeshLambertMaterial({color: 0x66ffcc});
         var octahedron1 = new THREE.Mesh(octahedron, toscha)
-        octahedron1.position.set(1, 0, -3);
+        octahedron1.position.set(4, -2, 0);
 
         // set rotation
         // octahedron1.rotation.set(0,-6,0);
@@ -134,6 +136,12 @@
             //MAKE IT ROTATE
             octahedron1.rotation.y += 0.01;
             mesh.rotation.y += 0.01;
+
+            //orbit?
+            // octahedron1.position.x += -1
+            // octahedron1.position.y += -0.1
+            // octahedron1.position.z += -0.1
+
 
             renderer.render(scene, camera);
         }
