@@ -1,8 +1,9 @@
-/* GENERAL */
+/* GENERAL____________________________________________________________________________________________________________ */
+body {
+    overflow: hidden;
+    background: rgb(191, 51, 255);
+    background: linear-gradient(166deg, rgba(191, 51, 255, 1) 0%, rgba(16, 46, 82, 1) 41%, rgba(0, 0, 0, 1) 66%);
 }
-}
-
-body{background-color: black;}
 
 body,
 h1,
@@ -30,7 +31,34 @@ html {
     align-items: center;
 }
 
-/* HEADER*/
+.title {
+    text-align: left;
+    font: italic bold 45px;
+}
+
+.content {
+    /* margin: 7%; */
+    padding-right: 10%;
+    padding-left: 10%;
+    flex-direction: column;
+}
+
+/* make canvas as background? ¯\_(ツ)_/¯
+iframe {
+    z-index : -9999;
+    position: absolute;
+    top : 0;
+    left    : 0;
+    width   : 100%;
+    height  : 100%;
+    margin  : 0;
+    padding : 0;} */
+
+/* HEADER____________________________________________________________________________________________________________*/
+header {
+    border-bottom: 2.5px white solid;
+}
+
 .headercontainer {
     /* Implement static navbar that wouldn't fuckup */
     /* position: fixed; */
@@ -54,10 +82,6 @@ html {
     transition: all 500ms ease;
 }
 
-.navButton:hover {
-    color: #818181;
-}
-
 .logo {
     padding-right: 20px;
     margin: 5px;
@@ -73,7 +97,7 @@ html {
     order: 2;
 }
 
-/* BURGER MENU OVERLAY */
+/* MENU OVERLAY____________________________________________________________________________________________________________*/
 .overlay {
     height: 100%;
     width: 0;
@@ -104,6 +128,7 @@ html {
     transition: 0.3s;
 }
 
+.navButton:hover,
 .overlay a:hover,
 .overlay a:focus {
     color: #818181;
@@ -127,17 +152,4 @@ html {
         top: 15px;
         right: 35px;
     }
-}
-
-/* CONTENT */
-.title {
-    text-align: left;
-    font: italic bold 45px;
-}
-
-.content {
-    /* margin: 7%; */
-    padding-right: 10%;
-    padding-left: 10%;
-    flex-direction: column;
 }

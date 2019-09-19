@@ -10,8 +10,7 @@
 </head>
 
 <body>
-    <!-- HEADER -->
-    <header class="main-header">
+    <header>
         <div class="headercontainer">
             <span class="navButton" onclick="openNav()">&#9776;</span>
             <div class="logo">
@@ -34,10 +33,6 @@
         </div>
     </div>
 
-    <!-- BODY -->
-    <a href="home.html"><img src="content/001logo.png" id="myLogo" style="height:auto ;width: auto;padding-left: 50px"></a>
-    <!-- <div style="background: crimson;height: 500px;"><h1>Welcome</h1><p>test</p></div> -->
-
     <!-- SCRIPT -->
     <script src="js/main.js"></script>
 
@@ -47,27 +42,29 @@
     <!-- library for TweenMax animation plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 
-    <!-- 3D "*MAGIC*" -->
+    <!-- THREE.JS -->
     <script>
         // constructor for scene
         var scene = new THREE.Scene();
 
         // constructor for persperctive camera with 75 FOV, size of browser window, render distance of the near/far plane 0.1 to 1000
         var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
         //set camera position
         camera.position.x = 0;
         camera.position.y = 0;
         camera.position.z = 6;
+
         // constructor for renderer with AA property
         var renderer = new THREE.WebGLRenderer({
             antialias: true,
             alpha: true
         });
 
-        //alpha channel
-        renderer.setClearColor(0xffffff, 0)
-
         //background color for renderer
+        //alpha channel enabled
+        renderer.setClearColor(0xffffff, 0)
+        // alpha chanel disabled
         // renderer.setClearColor("#000000");
 
         //size for the renderer based on window width and height
@@ -103,11 +100,14 @@
 
         //OCTAHEDRON
         var octahedron = new THREE.OctahedronGeometry(1, 0)
+
         var material1 = new THREE.MeshLambertMaterial({
             color: 0xffffff
         });
         var octahedron1 = new THREE.Mesh(octahedron, material1)
-        octahedron1.position.set(-2.75 , 3, 0);
+
+        //set position
+        octahedron1.position.set(-2.75, 3, 0);
 
         // set rotation
         octahedron1.rotation.set(1, 0, 1);
@@ -122,13 +122,15 @@
         // octahedronMesh2.position.set=(1, 0, 1);
         // scene.add(octahedronMesh2);
 
-        //lighting (colour, intensity, distance, decay)
-        var light = new THREE.PointLight(0xffffff, 1, 100)
-        light.position.set(-5, 3, 7);
-        scene.add(light);
+        //lighting 
+        //PointLight(colour, intensity, distance, decay);
+        var light = new THREE.PointLight(0xffffff, 1, 100);
 
-        //call renderer method on the renderer to show things on the scene
-        // renderer.render(scene, camera);
+        //setpos
+        light.position.set(-5, 3, 7);
+
+        //add light to scene
+        scene.add(light);
 
         // method to fix render aspect ration on windows resize event
         // var render = function() {
@@ -137,30 +139,24 @@
         // }
 
         // method to refresh the canvas every frame
-        // 
         var render = function () {
             requestAnimationFrame(render);
 
-            //put object manipulation command below this comment...
+            //Animate below this comment...
 
-            //MAKE IT ROTATE
+            //Rotation per frame
             octahedron1.rotation.y += 0.005;
             mesh.rotation.y += 0.01;
 
-
-            //orbit?
-            // octahedron1.position.x += -1
-            // octahedron1.position.y += -0.1
-            // octahedron1.position.z += -0.1
-
-
-
+            //show things on scene
             renderer.render(scene, camera);
         }
-        // call function method
+
         render();
     </script>
-
+    
+    <a href="home.html"><img src="content/001logo.png" id="myLogo"
+            style="height:auto ;width: auto;padding-left: 50px"></a>
 </body>
 
 </html>
