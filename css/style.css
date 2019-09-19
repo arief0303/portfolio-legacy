@@ -1,11 +1,9 @@
 /* GENERAL */
-* {
-    background: #000;
-}
-
 .main-header {
     border-bottom: 2px solid white;
 }
+
+body{background-color: black;}
 
 body,
 h1,
