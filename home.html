@@ -18,7 +18,8 @@
                 <!-- <h1 style="color: white;">"LOGO"</h1> -->
                 <!-- <a href="home.html"><img src="content/001logo.png" id="myLogo"></a> -->
             </div>
-            <div class="headerplaceholder"></div></div>
+            <div class="headerplaceholder"></div>
+        </div>
     </header>
 
     <!-- OVERLAY MENU -->
@@ -49,6 +50,7 @@
     <script>
         // constructor for scene
         var scene = new THREE.Scene();
+
         // constructor for persperctive camera with 75 FOV, size of browser window, render distance of the near/far plane 0.1 to 1000
         var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         //set camera position
@@ -57,11 +59,16 @@
         camera.position.z = 6;
         // constructor for renderer with AA property
         var renderer = new THREE.WebGLRenderer({
-            antialias: true
+            antialias: true,
+            alpha: true
         });
 
+        //alpha channel
+        renderer.setClearColor(0xffffff, 0)
+
         //background color for renderer
-        renderer.setClearColor("#000000");
+        // renderer.setClearColor("#000000");
+
         //size for the renderer based on window width and height
         renderer.setSize(window.innerWidth, window.innerHeight);
 
@@ -87,7 +94,7 @@
         //define mesh of a sphere with material
         var mesh = new THREE.Mesh(geometry, material);
         //set scale
-        mesh.scale.set(2,2,2);
+        mesh.scale.set(2, 2, 2);
         //set position
         mesh.position.set(0, 1, 0);
         //add mesh to scene
@@ -95,12 +102,14 @@
 
         //OCTAHEDRON
         var octahedron = new THREE.OctahedronGeometry(1, 0)
-        var material1 = new THREE.MeshLambertMaterial({color: 0xffffff});
+        var material1 = new THREE.MeshLambertMaterial({
+            color: 0xffffff
+        });
         var octahedron1 = new THREE.Mesh(octahedron, material1)
         octahedron1.position.set(-2.5, 3, 0);
 
         // set rotation
-        octahedron1.rotation.set(1,0,1);
+        octahedron1.rotation.set(1, 0, 1);
 
         //set scale
         octahedron1.scale.set(1, 1, 1);
@@ -137,15 +146,16 @@
             octahedron1.rotation.y += 0.005;
             mesh.rotation.y += 0.01;
 
+
             //orbit?
             // octahedron1.position.x += -1
             // octahedron1.position.y += -0.1
             // octahedron1.position.z += -0.1
 
 
+
             renderer.render(scene, camera);
         }
-
         // call function method
         render();
     </script>
