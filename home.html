@@ -16,9 +16,9 @@
             <span class="navButton" onclick="openNav()">&#9776;</span>
             <div class="logo">
                 <!-- <h1 style="color: white;">"LOGO"</h1> -->
-                <!-- <a href="home.html"><img src="content/001logo.png" id="myLogo"></a> -->
+                <a href="home.html"><img src="content/001logo.png" id="myLogo"></a>
             </div>
-            <!-- <div class="headerplaceholder"></div></div> -->
+            <div class="headerplaceholder"></div></div>
     </header>
 
     <!-- OVERLAY MENU -->
@@ -87,23 +87,23 @@
         //define mesh of a sphere with material
         var mesh = new THREE.Mesh(geometry, material);
         //set scale
-        mesh.scale.set(1.5,1.5,1.5);
+        mesh.scale.set(2,2,2);
         //set position
-        mesh.position.set(-3.5, 4, 0);
+        mesh.position.set(0, 1, 0);
         //add mesh to scene
         scene.add(mesh);
 
         //OCTAHEDRON
         var octahedron = new THREE.OctahedronGeometry(1, 0)
-        var toscha = new THREE.MeshLambertMaterial({color: 0x66ffcc});
-        var octahedron1 = new THREE.Mesh(octahedron, toscha)
-        octahedron1.position.set(4, -2, 0);
+        var material1 = new THREE.MeshLambertMaterial({color: 0xffffff});
+        var octahedron1 = new THREE.Mesh(octahedron, material1)
+        octahedron1.position.set(-2.5, 3, 0);
 
         // set rotation
-        // octahedron1.rotation.set(0,-6,0);
+        octahedron1.rotation.set(1,0,1);
 
         //set scale
-        octahedron1.scale.set(1, 1.5, 1);
+        octahedron1.scale.set(1, 1, 1);
         scene.add(octahedron1);
 
         //OCTAHEDRON 2
@@ -114,7 +114,7 @@
 
         //lighting (colour, intensity, distance, decay)
         var light = new THREE.PointLight(0xffffff, 1, 100)
-        light.position.set(15, 0, 25);
+        light.position.set(-5, 3, 7);
         scene.add(light);
 
         //call renderer method on the renderer to show things on the scene
@@ -134,7 +134,7 @@
             //put object manipulation command below this comment...
 
             //MAKE IT ROTATE
-            octahedron1.rotation.y += 0.01;
+            octahedron1.rotation.y += 0.005;
             mesh.rotation.y += 0.01;
 
             //orbit?
