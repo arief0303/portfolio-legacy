@@ -16,7 +16,7 @@
             <span class="navButton" onclick="openNav()">&#9776;</span>
             <div class="logo">
                 <!-- <h1 style="color: white;">"LOGO"</h1> -->
-                <a href="home.html"><img src="content/001logo.png" id="myLogo"></a>
+                <!-- <a href="home.html"><img src="content/001logo.png" id="myLogo"></a> -->
             </div>
             <!-- <div class="headerplaceholder"></div></div> -->
     </header>
@@ -50,56 +50,96 @@
         // constructor for scene
         var scene = new THREE.Scene();
         // constructor for persperctive camera with 75 FOV, size of browser window, render distance of the near/far plane 0.1 to 1000
-        var camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         //set camera position
-        camera.position.z= 5;
+        camera.position.z = 7;
+        camera.position.y = -3;
+        camera.position.x = 2;
         // constructor for renderer with AA property
-        var renderer = new THREE.WebGLRenderer({antialias: true});
+        var renderer = new THREE.WebGLRenderer({
+            antialias: true
+        });
 
         //background color for renderer
         renderer.setClearColor("#000000");
         //size for the renderer based on window width and height
-        renderer.setSize(window.innerWidth,window.innerHeight);
+        renderer.setSize(window.innerWidth, window.innerHeight);
 
         //call a method to create <canvas> element
         document.body.appendChild(renderer.domElement);
 
         //auto resize canvas by listening to window resize event
         window.addEventListener('resize', () => {
-            renderer.setSize(window.innerWidth,window.innerHeight);
+            renderer.setSize(window.innerWidth, window.innerHeight);
             //re-adjust camera aspect ratio
-            camera.aspect = window.innerWidth/window.innerHeight;
+            camera.aspect = window.innerWidth / window.innerHeight;
             //update camera everytime theres adjustment made
-            camera.updateProjectMatrix();
+            camera.updateProjectionMatrix();
         })
-        
+
         // SPHERE
         //define geometry
-        var geometry = new THREE.SphereGeometry(1, 10, 10);
+        var geometry = new THREE.SphereGeometry(1, 10, 500);
         //define material
-        var material = new THREE.MeshLambertMaterial({color: 0xFFCC00});
+        var material = new THREE.MeshLambertMaterial({
+            color: 0xff9900
+        });
         //define mesh of a sphere with material
-        var mesh = new THREE.Mesh(geometry,material);
+        var mesh = new THREE.Mesh(geometry, material);
         //set position
-        mesh.position.set(-2,2,-2);
+        mesh.position.set(-2, 2, -3);
         //add mesh to scene
         scene.add(mesh);
 
         //OCTAHEDRON
-        // var octahedron = new THREE.OctahedronGeometry(10,4)
-        // var octahedron1 = new THREE.Mesh(octahedron, material)
-        // octahedron1.position.set(0,0,0);
-        // scene.add(octahedron1);
-        // <------------------------------------------------------------------------------CONTINUE ADDING OCTAHEDRON
+        var octahedron = new THREE.OctahedronGeometry(1, 0)
+        var toscha = new THREE.MeshLambertMaterial({color: 0x66ffcc});
+        var octahedron1 = new THREE.Mesh(octahedron, toscha)
+        octahedron1.position.set(1, 0, -3);
 
+        // set rotation
+        // octahedron1.rotation.set(0,-6,0);
+
+        //set scale
+        octahedron1.scale.set(1, 1.5, 1);
+        scene.add(octahedron1);
+
+        //OCTAHEDRON 2
+        // var octahedronGeometry2 = new THREE.OctahedronGeometry(1,2)
+        // var octahedronMesh2 = new THREE.Mesh(octahedronGeometry2, material)
+        // octahedronMesh2.position.set=(1, 0, 1);
+        // scene.add(octahedronMesh2);
 
         //lighting (colour, intensity, distance, decay)
         var light = new THREE.PointLight(0xffffff, 1, 100)
-        light.position.set(15,0,25);
+        light.position.set(15, 0, 25);
         scene.add(light);
 
         //call renderer method on the renderer to show things on the scene
-        renderer.render(scene, camera);
+        // renderer.render(scene, camera);
+
+        // method to fix render aspect ration on windows resize event
+        // var render = function() {
+        //     requestAnimationFrame(render);
+        //     renderer.render(scene, camera);
+        // }
+
+        // method to refresh the canvas every frame
+        // 
+        var render = function () {
+            requestAnimationFrame(render);
+
+            //put object manipulation command below this comment...
+
+            //MAKE IT ROTATE
+            octahedron1.rotation.y += 0.01;
+            mesh.rotation.y += 0.01;
+
+            renderer.render(scene, camera);
+        }
+
+        // call function method
+        render();
     </script>
 
 </body>
