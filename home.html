@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!-- BODY HEADER____________________________________________________________________________________________________________ -->
     <header>
         <div class="headercontainer">
             <span class="navButton" onclick="openNav()">&#9776;</span>
@@ -22,7 +23,7 @@
         </div>
     </header>
 
-    <!-- OVERLAY MENU -->
+    <!-- OVERLAY MENU____________________________________________________________________________________________________________ -->
     <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
@@ -34,16 +35,15 @@
         </div>
     </div>
 
-    <!-- SCRIPT -->
+    <!-- SCRIPT SOURCES____________________________________________________________________________________________________________ -->
+    <!-- general script -->
     <script src="js/main.js"></script>
-
     <!-- library for three js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.js"></script>
-
     <!-- library for TweenMax animation plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 
-    <!-- THREE.JS -->
+    <!-- THREE.JS____________________________________________________________________________________________________________ -->
     <script>
         // constructor for scene
         var scene = new THREE.Scene();
@@ -133,14 +133,14 @@
         //add light to scene
         scene.add(light);
 
-        // method to fix render aspect ration on windows resize event
+        // function to fix render aspect ration on windows resize event
         // var render = function() {
         //     requestAnimationFrame(render);
         //     renderer.render(scene, camera);
         // }
 
-        // method to refresh the canvas every frame
-        var render = function () {
+        // function to refresh the canvas every frame
+        var render = function refreshCanvas() {
             requestAnimationFrame(render);
 
             //Animate below this comment...
