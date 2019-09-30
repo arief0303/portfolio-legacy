@@ -28,6 +28,7 @@ var camera = new THREE.PerspectiveCamera(80, window.innerWidth / window.innerHei
 // controls
 var controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.autoRotate = true;
+controls.enableZoom = false;
 
 // manual camera adjust
 camera.position.set(0, 0, 5);
