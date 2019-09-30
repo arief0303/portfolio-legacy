@@ -72,9 +72,9 @@ function animate() {
 
   // animation
   for (var x = 0; x < objArray.length; x++) {
-    objArray[x].rotation.x += 0.001;
-    objArray[x].rotation.y += 0.001;
-    objArray[x].rotation.z += 0.001;
+    objArray[x].rotation.x += Math.PI/4096;
+    objArray[x].rotation.y += Math.PI/2048;
+    objArray[x].rotation.z += Math.PI/1024;
   }
 
   renderer.render(scene, camera);
