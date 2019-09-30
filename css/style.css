@@ -1,8 +1,9 @@
 /* GENERAL____________________________________________________________________________________________________________ */
 body {
     overflow: hidden;
-    background: rgb(191, 51, 255);
-    background: linear-gradient(166deg, rgba(191, 51, 255, 1) 0%, rgba(16, 46, 82, 1) 41%, rgba(0, 0, 0, 1) 66%);
+    background: blue;
+    /* background: rgb(191, 51, 255);
+     background: linear-gradient(166deg, rgba(191, 51, 255, 1) 0%, rgba(16, 46, 82, 1) 41%, rgba(0, 0, 0, 1) 66%); */
 }
 
 body,

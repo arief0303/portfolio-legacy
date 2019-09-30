@@ -9,7 +9,7 @@ function closeNav() {
   document.getElementById("myNav").style.width = "0%";
 }
 
-//THREE.JS SCRIPT___________________________________________________________________
+// THREE.JS SCRIPT___________________________________________________________________
 // renderer
 var renderer = new THREE.WebGLRenderer({
   antialias: true,
@@ -23,10 +23,11 @@ document.body.appendChild(renderer.domElement); //create canvas with renderer
 var scene = new THREE.Scene();
 
 // camera
-var camera = new THREE.PerspectiveCamera(80, window.innerWidth / window.innerHeight, 1, 1000);
+var camera = new THREE.PerspectiveCamera(80, window.innerWidth / window.innerHeight, 0.1, 1000);
 
 // controls
 var controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.autoRotate = true;
 
 // manual camera adjust
 camera.position.set(0, 0, 5);
@@ -55,32 +56,29 @@ for (let i = 0; i < 10; i++) {
   }
 }
 
-//auto resize canvas by listening to window resize event
+// auto resize canvas by listening to window resize event
 window.addEventListener('resize', () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
 })
 
-//log scene
-console.log(scene);
-
-
-//animate function
+// animate function
 function animate() {
   requestAnimationFrame(animate);
 
   controls.update(); //controls.update() must be called after any manual changes to the camera's transform
 
-  //animation
+  // animation
   for (var x = 0; x < objArray.length; x++) {
     objArray[x].rotation.x += 0.001;
     objArray[x].rotation.y += 0.001;
     objArray[x].rotation.z += 0.001;
   }
 
-
   renderer.render(scene, camera);
 };
 
 animate();
+
+console.log(scene);
