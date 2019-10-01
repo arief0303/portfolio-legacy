@@ -62,7 +62,8 @@ html {
 
 /* HEADER____________________________________________________________________________________________________________*/
 header {
-    border-bottom: 2.5px rgba(255, 255, 255, 0.25) solid;
+    /* border-bottom: 2.5px rgba(255, 255, 255, 0.25) solid; */
+    position: fixed;
 }
 
 .headercontainer {
