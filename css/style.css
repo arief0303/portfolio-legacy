@@ -35,7 +35,7 @@ h4,
 h5,
 h6,
 p {
-    font-family: "Raleway", sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 body,
@@ -74,6 +74,7 @@ html {
 header {
     /* border-bottom: 2.5px rgba(255, 255, 255, 0.25) solid; */
     position: fixed;
+    padding-top: 5px;
 }
 
 .headercontainer {
@@ -89,6 +90,7 @@ header {
 
 .navButton {
     padding-left: 20px;
+    padding-right: 20px;
     order: 0;
     position: relative;
     /* margin-top: 30px; */
@@ -103,11 +105,7 @@ header {
     /* padding-right: 20px; */
     padding-right: 20px;
     order: 1;
-}
-
-#myLogo {
-    width: 75px;
-    height: 75px;
+    font-color: white;
 }
 
 .headerplaceholder {
@@ -122,8 +120,8 @@ header {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
     overflow-x: hidden;
     transition: 0.5s;
 }
