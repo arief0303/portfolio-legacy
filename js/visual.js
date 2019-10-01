@@ -37,12 +37,13 @@ var renderer = new THREE.WebGLRenderer({
   // var mesh1 = new THREE.Mesh(geometry1, material1); //object1 mesh
   // scene.add(mesh1); //add object1 to scene
   
-  // CLONER
+  // cloner
   var objArray = [];
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 20; i++) {
     var meshes = new THREE.Mesh(geometry1, material1);
     meshes.position.set(i - 3.5, i, i);
-    // mesh1.material1.opacity=0.6;
+    
+    //mysterious algorithm, should ask Mr.Chris again to explain 
     if (i == 0) {
       scene.add(meshes);
       var primeMesh = meshes;
@@ -67,7 +68,7 @@ var renderer = new THREE.WebGLRenderer({
   
     controls.update(); //controls.update() must be called after any manual changes to the camera's transform
   
-    // animation
+    // golden ratio animation
     for (var x = 0; x < objArray.length; x++) {
       objArray[x].rotation.x += Math.PI / 512;
       objArray[x].rotation.y += Math.PI / 1024;
