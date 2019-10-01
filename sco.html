@@ -2,24 +2,27 @@
 <html>
 
 <head>
-    <title>SCO</title>
+    <title>Home</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <!-- <link href="hamburgers/dist/hamburgers.css" rel="stylesheet"> -->
 </head>
 
 <body>
-    <header class="main-header">
+    <!-- BODY HEADER____________________________________________________________________________________________________________ -->
+    <header>
         <div class="headercontainer">
             <span class="navButton" onclick="openNav()">&#9776;</span>
             <div class="logo">
+                <!-- <a href="home.html" style="color: rgba(255, 255, 255, 0.4); margin: 0 px">Ar</a> -->
                 <!-- <h1 style="color: white;">"LOGO"</h1> -->
                 <!-- <a href="home.html"><img src="content/001logo.png" id="myLogo"></a> -->
             </div>
-            <!-- <div class="headerplaceholder"></div></div> -->
+            <!-- <div class="headerplaceholder"></div> -->
+        </div>
     </header>
+
     <section class="content">
         <section id="title">
             <h2>SCO</h2>
@@ -61,19 +64,24 @@
         </section>
     </section>
 
+    <!-- OVERLAY MENU____________________________________________________________________________________________________________ -->
     <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
             <a href="home.html">HOME</a>
-            <a href="dev.html">DEV</a>
+            <a href="#">DEV</a>
             <a href="#">PTM</a>
             <a href="#">UX</a>
-            <a href="#">SCO</a>
+            <a href="sco.html">SCO</a>
         </div>
     </div>
 
+    <!-- SCRIPT SOURCES____________________________________________________________________________________________________________ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.module.js"></script> -->
+    <script src="js/OrbitControls.js"></script>
     <script src="js/main.js"></script>
-
 </body>
 
 </html>
