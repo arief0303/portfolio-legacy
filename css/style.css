@@ -67,9 +67,9 @@ html {
     /* background-color: #818181; */
 }
 
-/* hide scrollbar(but allow scrolling) in Google Chrome */
 ::-webkit-scrollbar {
     display: none;
+/* hide scrollbar(but allow scrolling) in Google Chrome */
 }
 
 #element {
