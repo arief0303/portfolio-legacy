@@ -17,7 +17,7 @@ var renderer = new THREE.WebGLRenderer({
 });
 renderer.setSize(window.innerWidth, window.innerHeight); //set size of renderer to window size
 renderer.setClearColor(0xffffff, 0) //set renderer color to alpha
-document.body.appendChild(renderer.domElement); //create canvas with renderer
+document.body.appendChild(renderer.domElement); //create canvas
 
 // scene
 var scene = new THREE.Scene();
