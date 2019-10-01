@@ -46,27 +46,6 @@ html {
     line-height: 1.8;
 }
 
-.content {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    align-items: center;
-}
-
-.title {
-    text-align: left;
-    font: italic bold 45px;
-}
-
-.content {
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-right: 10%;
-    padding-left: 10%;
-    flex-direction: column;
-    /* background-color: #818181; */
-}
-
 /* hide scrollbar(but allow scrolling) in Google Chrome */
 ::-webkit-scrollbar {
     display: none;
@@ -74,6 +53,30 @@ html {
 
 #element {
     scrollbar-width: none;
+}
+
+/* CONTENT_______________________________________________________________ */
+.content {
+    /* margin: 5%; */
+    margin-left: 20%;
+    margin-right: 20%;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center; */
+    margin: 25%;
+    padding: 0%;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 120px;
+    transition: 1s;
 }
 
 /* HEADER____________________________________________________________________________________________________________*/
