@@ -28,7 +28,7 @@ var renderer = new THREE.WebGLRenderer({
   
   
   // manual camera adjust
-  camera.position.set(0, 0, 5);
+  camera.position.set(0, 0, -9);
   controls.update(); //controls.update() must be called after any manual changes to the camera's transform
   
   // object1
