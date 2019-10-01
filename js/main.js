@@ -29,13 +29,13 @@ var camera = new THREE.PerspectiveCamera(80, window.innerWidth / window.innerHei
 var controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.autoRotate = true;
 controls.autoRotateSpeed = 5;
-controls.enablePan = false;
+controls.enablePan = true;
 controls.enableZoom = false;
 controls.enableDamping = true;
 controls.minPolarAngle = 0.8;
-controls.maxPolarAngle = 2.4;
+controls.maxPolarAngle = 0.4;
 controls.dampingFactor = 0.07;
-controls.rotateSpeed = 1;
+controls.rotateSpeed = 0.8;
 
 
 // manual camera adjust
@@ -80,8 +80,8 @@ function animate() {
 
   // animation
   for (var x = 0; x < objArray.length; x++) {
-    objArray[x].rotation.x += Math.PI / 4096;
-    objArray[x].rotation.y += Math.PI / 2048;
+    objArray[x].rotation.x += Math.PI / 512;
+    objArray[x].rotation.y += Math.PI / 1024;
     objArray[x].rotation.z += Math.PI / 1024;
   }
 
