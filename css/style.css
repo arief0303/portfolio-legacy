@@ -7,7 +7,7 @@ body {
 }
 
 /* canvas as bg, comment to enable OrbitControls for interactive visuals*/
-/* canvas {
+canvas {
     width: 100vw;
     height: 100vh;
     display: block;
@@ -15,7 +15,7 @@ body {
     top: 0;
     left: 0;
     z-index: -9999;
-  } */
+  }
 
 body,
 h1,
