@@ -1,4 +1,8 @@
 /* GENERAL____________________________________________________________________________________________________________ */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     overflow-x: hidden;
     background: blue;
@@ -54,24 +58,38 @@ html {
 }
 
 #title {
+    background: rgba(0, 0, 0, 0.5);
     font-size: 128px;
-
     color: rgba(255, 255, 255, 0.5);
-    padding: 50px 10px; /* Some padding */
-    /* margin: 50%; */
-    text-align: center;
+    /* padding: 50px 10px; */
+    margin-bottom: 0%;
+    margin-left: 10vw;
+    margin-right: 10vw;
+
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+
+    /* padding-top: 10%; */
+    /* text-align: center; */
     font-weight: bold;
     font-style: italic;
-
-    transition: 1s;
+    transition: 2s;
 }
 
 .content {
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-right: 10%;
-    padding-left: 10%;
+    background: rgba(255, 255, 255, 0.5);
+    margin-top: 0%;
+    margin-left: 10vw;
+    margin-right: 10vw;
+
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+    padding-top: 5vw;
+
     flex-direction: column;
+
+    transition: 2s;
+
     /* background-color: #818181; */
 }
 
@@ -86,8 +104,7 @@ html {
 
 /* HEADER____________________________________________________________________________________________________________*/
 header {
-    /* border-bottom: 2.5px rgba(255, 255, 255, 0.25) solid; */
-    position: fixed;
+    border-bottom: 2.5px rgba(255, 255, 255, 0.25) solid;
     padding-top: 5px;
 }
 
@@ -103,12 +120,12 @@ header {
 }
 
 .navButton {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 25px;
+    /* padding-right: 10vw; */
     order: 0;
-    position: relative;
+    /* position: relative; */
     /* margin-top: 30px; */
-    font-size: 35px;
+    font-size: 43px;
     cursor: pointer;
     color: rgba(255, 255, 255, 0.5);
     padding-bottom: 0px;
@@ -124,7 +141,7 @@ header {
     /* padding-right: 20px; */
     padding-right: 20px;
     order: 1;
-    font-color: white;
+    /* font-color: white; */
 }
 
 .headerplaceholder {
@@ -142,15 +159,17 @@ header {
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.75);
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.75s;
 }
 
 .overlay-content {
+    font-weight: bold;
     position: relative;
     top: 25%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
+
 }
 
 .overlay a {
