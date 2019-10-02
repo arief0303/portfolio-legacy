@@ -21,14 +21,14 @@ var renderer = new THREE.WebGLRenderer({
   controls.enablePan = true;
   controls.enableZoom = true;
   controls.enableDamping = true;
-  controls.minPolarAngle = 0.8;
-  controls.maxPolarAngle = 0.4;
+  // controls.minPolarAngle = 0.8;
+  // controls.maxPolarAngle = 0.4;
   controls.dampingFactor = 0.07;
   controls.rotateSpeed = 0.8;
   
   
   // manual camera adjust
-  camera.position.set(0, 0, -9);
+  camera.position.set(0, 0, -2);
   controls.update(); //controls.update() must be called after any manual changes to the camera's transform
   
   // object1

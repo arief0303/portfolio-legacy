@@ -54,7 +54,7 @@ html {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-    align-items: center;
+    /* align-items: center; */
 }
 
 #title {
@@ -91,6 +91,17 @@ html {
     transition: 2s;
 
     /* background-color: #818181; */
+}
+
+.content h1,
+h2,
+h3 {
+    font-style: italic;
+}
+
+article {
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 ::-webkit-scrollbar {
