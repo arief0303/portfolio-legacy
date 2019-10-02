@@ -17,9 +17,9 @@ var renderer = new THREE.WebGLRenderer({
   // controls
   var controls = new THREE.OrbitControls(camera, renderer.domElement);
   controls.autoRotate = true;
-  controls.autoRotateSpeed = 5;
+  controls.autoRotateSpeed = 1;
   controls.enablePan = true;
-  controls.enableZoom = false;
+  controls.enableZoom = true;
   controls.enableDamping = true;
   controls.minPolarAngle = 0.8;
   controls.maxPolarAngle = 0.4;
@@ -39,7 +39,7 @@ var renderer = new THREE.WebGLRenderer({
   
   // cloner
   var objArray = [];
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 32; i++) {
     var meshes = new THREE.Mesh(geometry1, material1);
     meshes.position.set(i - 3.5, i, i);
     
@@ -69,10 +69,11 @@ var renderer = new THREE.WebGLRenderer({
     controls.update(); //controls.update() must be called after any manual changes to the camera's transform
   
     // golden ratio animation
+    var div = 512;
     for (var x = 0; x < objArray.length; x++) {
-      objArray[x].rotation.x += Math.PI / 512;
-      objArray[x].rotation.y += Math.PI / 1024;
-      objArray[x].rotation.z += Math.PI / 1024;
+      objArray[x].rotation.x += Math.PI / (div*2);
+      objArray[x].rotation.y += Math.PI / (div*6);
+      objArray[x].rotation.z += Math.PI / (div*6);
     }
   
     renderer.render(scene, camera);
