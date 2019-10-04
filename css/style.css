@@ -9,8 +9,6 @@ body {
     animation: rgb 100000ms infinite;
 }
 
-
-
 iframe {
     z-index: -9999;
     top: 0;
