@@ -152,9 +152,11 @@ article {
 /* HEADER____________________________________________________________________________________________________________*/
 header {
     border-bottom: 4px rgb(0, 0, 0) solid;
-    /* padding-top: 5px; */
-    /* position: fixed; */
-    /* width: 100%; */
+    padding-top: 0px;
+    position: fixed;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    top: 0;
 }
 
 .headercontainer {
@@ -241,7 +243,7 @@ header {
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
   #main {
     transition: margin-left .5s;
-    padding: 20px;
+    /* padding: 20px; */
   }
   
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
