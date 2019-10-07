@@ -6,14 +6,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link href="content/hamburgers/dist/hamburgers.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 </head>
 
 <body>
     <!-- BODY HEADER____________________________________________________________________________________________________________ -->
+    <div id="main">
+    
     <header>
         <div class="headercontainer">
-            <span class="navButton" onclick="openNav()">&#9776;</span>
+            <button class="hamburger hamburger--collapse" type="button">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                  </button>
             <div class="logo">
                 <!-- <a href="home.html" style="color: rgba(255, 255, 255, 0.4); margin: 0 px">Ar</a> -->
                 <!-- <h1 style="color: white;">"LOGO"</h1> -->
@@ -23,22 +30,23 @@
         </div>
     </header>
 
-    <iframe src="visual1.html" frameborder="0" style="position: fixed;"></iframe>
+        <iframe src="visual1.html" frameborder="0" style="position: fixed;"></iframe>
 
-    <h1 style="font-size: 60px; font-weight: bold;
+        <h1 style="font-size: 60px; font-weight: bold;
     font-style: italic;">Welcome</h1>
-    <a href="interactiveVisual.html" style="color: white;">interactiveVisual</a>
+        <a href="interactiveVisual.html" style="color: white;">interactiveVisual</a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sagittis lorem finibus, mollis dui sed, consectetur leo. Nullam bibendum lacus dui, quis vehicula ligula consectetur in. Duis tellus orci, condimentum at vehicula commodo, scelerisque vitae libero. Integer libero ligula, sodales sed sodales at, sollicitudin id purus. Proin porttitor eros vel libero tempus feugiat. Suspendisse eget libero congue, sollicitudin lorem sit amet, hendrerit odio. Duis varius odio in dolor molestie facilisis. Aenean sed augue velit. Suspendisse sollicitudin ornare nisi non interdum.
 
-    <!-- OVERLAY MENU____________________________________________________________________________________________________________ -->
-    <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="overlay-content">
-            <a href="home.html">HOME</a>
-            <a href="dev.html">DEV</a>
-            <a href="#">PTM</a>
+            Proin aliquet mi lorem, ac facilisis magna tempus eget. Suspendisse fermentum eros ut fermentum interdum. Aenean porttitor facilisis luctus. Vestibulum gravida dui non diam pharetra, nec rutrum augue dignissim. Nam aliquam ex sem. Vestibulum nunc sem, placerat et dignissim vitae, hendrerit nec elit. In id consectetur neque. Proin molestie enim vel ante laoreet, id mattis nisi luctus. Nulla sit amet ante ut orci aliquam posuere ac non turpis. Vestibulum vitae pretium nisl. Sed imperdiet ornare dui non mollis. Ut in laoreet ante.</p>
+    </div>
+
+    <!-- OFF-CANVAS MENU____________________________________________________________________________________________________________ -->
+    <div id="mySidenav" class="sidenav">
+        <a href="home.html">Home</a>
+            <a href="dev.html">Development</a>
+            <a href="#">Project</a>
             <a href="#">UX</a>
-            <a href="sco.html">SCO</a>
-        </div>
+            <a href="sco.html">Strategy & Concepting</a>
     </div>
 
     <!-- SCRIPT SOURCES____________________________________________________________________________________________________________ -->
