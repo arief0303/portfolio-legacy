@@ -25,6 +25,10 @@ iframe {
     z-index: -9999;
 } */
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     overflow-x: hidden;
     background: blue;
@@ -125,7 +129,7 @@ article {
     -o-animation: fadein 3s;
     /* Opera < 12.1 */
     animation: fadein 3s;
-    
+
     margin-top: 10vw;
     background: rgba(0, 0, 0, 0.5);
     font-size: 128px;
@@ -149,11 +153,14 @@ article {
 
 /* Header */
 header {
+    background: rgba(255, 255, 255, 0.75);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 70%);
+
     border-bottom: 4px rgb(0, 0, 0) solid;
+
     padding-top: 0px;
     position: fixed;
     width: 100%;
-    background: rgba(255, 255, 255, 0.75);
     top: 0;
 }
 
