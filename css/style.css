@@ -153,8 +153,8 @@ article {
 
 /* Header */
 header {
-    background: rgba(255, 255, 255, 0.75);
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 70%);
+    /* background: rgba(255, 255, 255, 0.75); */
+    /* background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 70%); */
 
     border-bottom: 4px rgb(0, 0, 0) solid;
 
