@@ -6,7 +6,7 @@
  * @link https://github.com/jonsuh/hamburgers
  */
 .hamburger {
-  padding: 30px 20px;
+  padding: 20px 20px;
   display: inline-block;
   cursor: pointer;
   -webkit-transition-property: opacity, -webkit-filter;
@@ -1346,5 +1346,371 @@
   bottom: 0;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
+}
+
+/* content styling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* iframe as background */
+iframe {
+  z-index: -9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* canvas as background */
+/* canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+} */
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  overflow-x: hidden;
+  background: blue;
+  -webkit-animation: rgb 100000ms infinite;
+          animation: rgb 100000ms infinite;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body,
+html {
+  margin: 0px;
+  color: white;
+  height: 100%;
+  line-height: 1.8;
+}
+
+section {
+  -webkit-animation: fadein 2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  /* Internet Explorer */
+  /* Opera < 12.1 */
+  animation: fadein 2s;
+  padding: 10vw;
+}
+
+.content {
+  -webkit-animation: fadein 2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  /* Internet Explorer */
+  /* Opera < 12.1 */
+  animation: fadein 2s;
+  background: rgba(255, 255, 255, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 0;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-top: 2.5vw;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -webkit-transition: 2s;
+  transition: 2s;
+  /* background-color: #818181; */
+  /* align-items: center; */
+}
+
+.content h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: italic;
+}
+
+article {
+  -webkit-animation: fadein 2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  /* Internet Explorer */
+  /* Opera < 12.1 */
+  animation: fadein 2s;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#title {
+  -webkit-animation: fadein 3s;
+  animation: fadein 3s;
+  margin-top: 10vw;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 128px;
+  /* color: rgba(255, 255, 255, 0.5); */
+  margin-bottom: 0%;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  font-weight: bold;
+  font-style: italic;
+  -webkit-transition: 2s;
+  transition: 2s;
+  /* padding-top: 10%; */
+  /* text-align: center; */
+  /* padding: 50px 10px; */
+}
+
+#element {
+  scrollbar-width: none;
+}
+
+/* Header */
+header {
+  /* background: rgba(255, 255, 255, 0.75); */
+  /* background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 70%); */
+  /* border-bottom: 4px rgb(0, 0, 0) solid; */
+  padding-top: 0px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.headercontainer {
+  /* position: fixed; */
+  padding-left: 0%;
+  padding-right: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navButton {
+  padding-left: 25px;
+  /* padding-right: 10vw; */
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  /* position: relative; */
+  /* margin-top: 30px; */
+  font-size: 43px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+  padding-bottom: 0px;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.navButton:hover {
+  color: white;
+  -webkit-animation: glowing 2500ms infinite;
+          animation: glowing 2500ms infinite;
+}
+
+.logo {
+  /* padding-right: 20px; */
+  padding-right: 20px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  /* font-color: white; */
+}
+
+.headerplaceholder {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+/* Keyframes */
+/* Fade in */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+
+/* Opera < 12.1 */
+
+/* Fade in to right */
+@keyframes fadeintoright {
+  from {
+    opacity: 0;
+    width: 0%;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+/* Firefox < 16 *//* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeintoright {}/* Internet Explorer *//* Opera < 12.1 */@-webkit-keyframes glowing {
+  0% {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  40% {
+    color: white;
+  }
+  60% {
+    color: white;
+  }
+  100% {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}@keyframes glowing {
+  0% {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  40% {
+    color: white;
+  }
+  60% {
+    color: white;
+  }
+  100% {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+@-webkit-keyframes rgb {
+  0% {
+    background: #0000FF;
+  }
+  40% {
+    background: #480CE8;
+  }
+  60% {
+    background: #910DFF;
+  }
+  100% {
+    background: #0000FF;
+  }
+}
+
+@keyframes rgb {
+  0% {
+    background: #0000FF;
+  }
+  40% {
+    background: #480CE8;
+  }
+  60% {
+    background: #910DFF;
+  }
+  100% {
+    background: #0000FF;
+  }
+}
+
+/* Off-canvas menu */
+/* The side navigation menu */
+.sidenav {
+  height: 100%;
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  padding-top: 60px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #818181;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  -webkit-transition: margin-left .5s;
+  transition: margin-left .5s;
+  /* padding: 20px; */
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
