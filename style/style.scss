@@ -153,13 +153,61 @@ article {
 header {
     /* background: rgba(255, 255, 255, 0.75); */
     /* background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 70%); */
-
     /* border-bottom: 4px rgb(0, 0, 0) solid; */
 
     padding-top: 0px;
     position: fixed;
     width: 100%;
     top: 0;
+
+    background: linear-gradient(270deg, rgba(0,0,0,0), rgba(0,0,0,0.5), rgba(0,0,0,0.75));
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+
+    @-webkit-keyframes AnimationName {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    @-moz-keyframes AnimationName {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    @keyframes AnimationName {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
 }
 
 .headercontainer {
