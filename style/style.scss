@@ -36,28 +36,69 @@ body {
     overflow-x: hidden;
     animation: rgb 100000ms infinite;
 
-    background: linear-gradient(135deg, #0000ff, #ff0000);
-background-size: 400% 400%;
+    background: linear-gradient(270deg, #0000ff, #ff0000);
+    background-size: 400% 400%;
 
--webkit-animation: AnimationName 30s ease infinite;
--moz-animation: AnimationName 30s ease infinite;
-animation: AnimationName 30s ease infinite;
+    -webkit-animation: AnimationName 12s ease infinite;
+    -moz-animation: AnimationName 12s ease infinite;
+    -o-animation: AnimationName 12s ease infinite;
+    animation: AnimationName 12s ease infinite;
 
-@-webkit-keyframes AnimationName {
-    0%{background-position:78% 0%}
-    50%{background-position:23% 100%}
-    100%{background-position:78% 0%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:78% 0%}
-    50%{background-position:23% 100%}
-    100%{background-position:78% 0%}
-}
-@keyframes AnimationName {
-    0%{background-position:78% 0%}
-    50%{background-position:23% 100%}
-    100%{background-position:78% 0%}
-}
+    @-webkit-keyframes AnimationName {
+        0% {
+            background-position: 88% 0%
+        }
+
+        50% {
+            background-position: 13% 100%
+        }
+
+        100% {
+            background-position: 88% 0%
+        }
+    }
+
+    @-moz-keyframes AnimationName {
+        0% {
+            background-position: 88% 0%
+        }
+
+        50% {
+            background-position: 13% 100%
+        }
+
+        100% {
+            background-position: 88% 0%
+        }
+    }
+
+    @-o-keyframes AnimationName {
+        0% {
+            background-position: 88% 0%
+        }
+
+        50% {
+            background-position: 13% 100%
+        }
+
+        100% {
+            background-position: 88% 0%
+        }
+    }
+
+    @keyframes AnimationName {
+        0% {
+            background-position: 88% 0%
+        }
+
+        50% {
+            background-position: 13% 100%
+        }
+
+        100% {
+            background-position: 88% 0%
+        }
+    }
 }
 
 body,
@@ -187,11 +228,14 @@ header {
     background: white;
 
     margin: 0;
-  padding: 0;
-  width: 90px;
-  height: 100%; /* Full height */
-  position: fixed; /* Make it stick, even on scroll */
-  overflow: auto; /* Enable scrolling if the sidenav has too much content */
+    padding: 0;
+    width: 90px;
+    height: 100%;
+    /* Full height */
+    position: fixed;
+    /* Make it stick, even on scroll */
+    overflow: auto;
+    /* Enable scrolling if the sidenav has too much content */
 }
 
 .headercontainer {

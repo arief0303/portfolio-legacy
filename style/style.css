@@ -1382,33 +1382,34 @@ body {
   overflow-x: hidden;
   -webkit-animation: rgb 100000ms infinite;
           animation: rgb 100000ms infinite;
-  background: linear-gradient(135deg, #0000ff, #ff0000);
+  background: -webkit-gradient(linear, right top, left top, from(#0000ff), to(#ff0000));
+  background: linear-gradient(270deg, #0000ff, #ff0000);
   background-size: 400% 400%;
-  -webkit-animation: AnimationName 30s ease infinite;
-  animation: AnimationName 30s ease infinite;
+  -webkit-animation: AnimationName 12s ease infinite;
+  animation: AnimationName 12s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
   0% {
-    background-position: 78% 0%;
+    background-position: 88% 0%;
   }
   50% {
-    background-position: 23% 100%;
+    background-position: 13% 100%;
   }
   100% {
-    background-position: 78% 0%;
+    background-position: 88% 0%;
   }
 }
 
 @keyframes AnimationName {
   0% {
-    background-position: 78% 0%;
+    background-position: 88% 0%;
   }
   50% {
-    background-position: 23% 100%;
+    background-position: 13% 100%;
   }
   100% {
-    background-position: 78% 0%;
+    background-position: 88% 0%;
   }
 }
 
