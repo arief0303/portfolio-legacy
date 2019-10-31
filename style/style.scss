@@ -1,5 +1,5 @@
 @import "hamburgers";
-$varWidth: 12.5vw;
+$varWidth: 16vw;
 
 /* content styling */
 html {
@@ -179,6 +179,7 @@ header {
     /* border-bottom: 4px rgb(0, 0, 0) solid; */
 
     // padding-top: 0px;
+
     position: fixed;
     width: 100%;
     top: 0;
@@ -187,7 +188,7 @@ header {
 
     margin: 0;
   padding: 0;
-  width: 10%;
+  width: 90px;
   height: 100%; /* Full height */
   position: fixed; /* Make it stick, even on scroll */
   overflow: auto; /* Enable scrolling if the sidenav has too much content */
@@ -228,6 +229,7 @@ header {
     order: 1;
     /* font-color: white; */
 }
+
 
 .headerplaceholder {
     order: 2;
