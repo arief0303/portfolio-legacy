@@ -1,5 +1,5 @@
 @import "hamburgers";
-$varWidth: 16vw;
+$varWidth: 14vw;
 
 /* content styling */
 html {
@@ -149,11 +149,11 @@ section {
     justify-content: flex-start;
     flex-direction: row;
     margin-top: 0;
-    margin-left: $varWidth;
+    margin-left: 90px;
     margin-right: $varWidth;
     padding-left: 4vw;
     padding-right: 4vw;
-    padding-top: 2.5vw;
+    padding-top: 0;
     flex-direction: column;
     transition: 2s;
     /* background-color: #818181; */
@@ -192,13 +192,13 @@ article {
     -o-animation: fadein 3s;
     animation: fadein 3s;
 
-    margin-top: 10vw;
+    margin-top: 0;
     background: rgba(0, 0, 0, 0.5);
-    font-size: 128px;
+    font-size: 15vw;
     /* color: rgba(255, 255, 255, 0.5); */
     margin-bottom: 0%;
-    margin-left: $varWidth;
-    margin-right: $varWidth;
+    margin-left: 90px;
+    margin-right: 0;
     padding-left: 4vw;
     padding-right: 4vw;
     font-weight: bold;
