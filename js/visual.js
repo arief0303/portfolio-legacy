@@ -1,4 +1,7 @@
 // THREE.JS SCRIPT___________________________________________________________________
+
+
+
 // renderer
 var renderer = new THREE.WebGLRenderer({
     antialias: true,
@@ -43,7 +46,6 @@ var renderer = new THREE.WebGLRenderer({
     var meshes = new THREE.Mesh(geometry1, material1);
     meshes.position.set(i - 3.5, i, i);
     
-    //mysterious algorithm, should ask Mr.Chris again to explain 
     if (i == 0) {
       scene.add(meshes);
       var primeMesh = meshes;
