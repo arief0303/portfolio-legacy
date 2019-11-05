@@ -1459,8 +1459,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding-right: 4vw;
-  padding-top: 0;
+  margin: 0px 0px 0px 90px;
   -ms-flex-direction: column;
       flex-direction: column;
   -webkit-transition: 2s;
