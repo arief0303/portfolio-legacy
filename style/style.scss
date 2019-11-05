@@ -148,10 +148,7 @@ section {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-    margin-top: 0;
-    margin-left: 90px;
-    margin-right: 0px;
-    padding-left: 4vw;
+    // margin: 0px 0px 0px 90px;
     padding-right: 4vw;
     padding-top: 0;
     flex-direction: column;
@@ -184,22 +181,17 @@ article {
     margin-top: 25px;
     margin-bottom: 25px;
 
-    padding: 60px 100px 60px;
+    // padding: 60px 100px 60px;
 }
 
 #title {
-    -webkit-animation: fadein 3s;
-    -moz-animation: fadein 3s;
-    -ms-animation: fadein 3s;
-    -o-animation: fadein 3s;
-    animation: fadein 3s;
-
+    color: black;
     margin-top: 0;
-    background: rgba(0, 0, 0, 0.5);
-    font-size: 7.5vw;
+    background: rgba(255, 255, 255, 1);
+    font-size: 3vw;
     /* color: rgba(255, 255, 255, 0.5); */
     margin-bottom: 0%;
-    margin-left: 90px;
+    margin-left: 30px;
     margin-right: 0;
     padding-left: 4vw;
     padding-right: 4vw;
