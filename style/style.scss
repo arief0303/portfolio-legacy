@@ -144,13 +144,13 @@ section {
     /* Opera < 12.1 */
     animation: fadein 2s;
 
-    background: rgba(255, 255, 255, 0.25);
+    // background: rgba(255, 255, 255, 0.25);
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
     margin-top: 0;
     margin-left: 90px;
-    margin-right: $varWidth;
+    margin-right: 0px;
     padding-left: 4vw;
     padding-right: 4vw;
     padding-top: 0;
@@ -183,6 +183,8 @@ article {
 
     margin-top: 25px;
     margin-bottom: 25px;
+
+    padding: 60px 100px 60px;
 }
 
 #title {
@@ -194,7 +196,7 @@ article {
 
     margin-top: 0;
     background: rgba(0, 0, 0, 0.5);
-    font-size: 15vw;
+    font-size: 7.5vw;
     /* color: rgba(255, 255, 255, 0.5); */
     margin-bottom: 0%;
     margin-left: 90px;

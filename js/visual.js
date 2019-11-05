@@ -42,7 +42,7 @@ var renderer = new THREE.WebGLRenderer({
   
   // cloner
   var objArray = [];
-  for (let i = 0; i < 16; i++) {
+  for (let i = 0; i <= 16; i++) {
     var meshes = new THREE.Mesh(geometry1, material1);
     meshes.position.set(i - 3.5, i, i);
     
