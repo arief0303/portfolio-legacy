@@ -1,277 +1,64 @@
 @import "hamburgers";
-$varWidth: 14vw;
+$bgColour: rgba(255, 255, 255, 1);
+$headerPadding: 90px;
+$titleSize: 55px;
 
-/* content styling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* iframe as background */
-iframe {
-    z-index: -9999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-/* canvas as background */
-/* canvas {
-    width: 100vw;
-    height: 100vh;
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -9999;
-} */
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-body {
-    overflow-x: hidden;
-    animation: rgb 100000ms infinite;
-
-    background: linear-gradient(270deg, #0000ff, #ff0000);
-    background-size: 400% 400%;
-
-    -webkit-animation: AnimationName 12s ease infinite;
-    -moz-animation: AnimationName 12s ease infinite;
-    -o-animation: AnimationName 12s ease infinite;
-    animation: AnimationName 12s ease infinite;
-
-    @-webkit-keyframes AnimationName {
-        0% {
-            background-position: 88% 0%
-        }
-
-        50% {
-            background-position: 13% 100%
-        }
-
-        100% {
-            background-position: 88% 0%
-        }
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 88% 0%
     }
 
-    @-moz-keyframes AnimationName {
-        0% {
-            background-position: 88% 0%
-        }
-
-        50% {
-            background-position: 13% 100%
-        }
-
-        100% {
-            background-position: 88% 0%
-        }
+    50% {
+        background-position: 13% 100%
     }
 
-    @-o-keyframes AnimationName {
-        0% {
-            background-position: 88% 0%
-        }
-
-        50% {
-            background-position: 13% 100%
-        }
-
-        100% {
-            background-position: 88% 0%
-        }
-    }
-
-    @keyframes AnimationName {
-        0% {
-            background-position: 88% 0%
-        }
-
-        50% {
-            background-position: 13% 100%
-        }
-
-        100% {
-            background-position: 88% 0%
-        }
+    100% {
+        background-position: 88% 0%
     }
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    font-family: 'Josefin Sans', sans-serif;
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 88% 0%
+    }
+
+    50% {
+        background-position: 13% 100%
+    }
+
+    100% {
+        background-position: 88% 0%
+    }
 }
 
-body,
-html {
-    margin: 0px;
-    color: white;
-    height: 100%;
-    line-height: 1.8;
+@-o-keyframes AnimationName {
+    0% {
+        background-position: 88% 0%
+    }
+
+    50% {
+        background-position: 13% 100%
+    }
+
+    100% {
+        background-position: 88% 0%
+    }
 }
 
-section {
-    -webkit-animation: fadein 2s;
-    /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 2s;
-    /* Firefox < 16 */
-    -ms-animation: fadein 2s;
-    /* Internet Explorer */
-    -o-animation: fadein 2s;
-    /* Opera < 12.1 */
-    animation: fadein 2s;
-    padding: $varWidth;
+@keyframes AnimationName {
+    0% {
+        background-position: 88% 0%
+    }
+
+    50% {
+        background-position: 13% 100%
+    }
+
+    100% {
+        background-position: 88% 0%
+    }
 }
 
-.content {
-    -webkit-animation: fadein 2s;
-    /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 2s;
-    /* Firefox < 16 */
-    -ms-animation: fadein 2s;
-    /* Internet Explorer */
-    -o-animation: fadein 2s;
-    /* Opera < 12.1 */
-    animation: fadein 2s;
-
-    // background: rgba(255, 255, 255, 0.25);
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    margin: 0px 0px 0px 90px;
-    flex-direction: column;
-    transition: 2s;
-    /* background-color: #818181; */
-    /* align-items: center; */
-
-}
-
-.content h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-style: italic;
-}
-
-article {
-    -webkit-animation: fadein 2s;
-    /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 2s;
-    /* Firefox < 16 */
-    -ms-animation: fadein 2s;
-    /* Internet Explorer */
-    -o-animation: fadein 2s;
-    /* Opera < 12.1 */
-    animation: fadein 2s;
-
-    margin-top: 25px;
-    margin-bottom: 25px;
-
-    // padding: 60px 100px 60px;
-}
-
-#title {
-    color: black;
-    margin-top: 0;
-    background: rgba(255, 255, 255, 1);
-    font-size: 3vw;
-    /* color: rgba(255, 255, 255, 0.5); */
-    margin-bottom: 0%;
-    margin-left: 30px;
-    margin-right: 0;
-    padding-left: 4vw;
-    padding-right: 4vw;
-    font-weight: bold;
-    font-style: italic;
-    transition: 2s;
-    /* padding-top: 10%; */
-    /* text-align: center; */
-    /* padding: 50px 10px; */
-}
-
-#element {
-    scrollbar-width: none;
-}
-
-/* Header */
-header {
-    /* background: rgba(255, 255, 255, 0.75); */
-    /* background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 70%); */
-    /* border-bottom: 4px rgb(0, 0, 0) solid; */
-
-    // padding-top: 0px;
-
-    position: fixed;
-    width: 100%;
-    top: 0;
-
-    background: white;
-
-    margin: 0;
-    padding: 0;
-    width: 90px;
-    height: 100%;
-    /* Full height */
-    position: fixed;
-    /* Make it stick, even on scroll */
-    overflow: auto;
-    /* Enable scrolling if the sidenav has too much content */
-}
-
-.headercontainer {
-    /* position: fixed; */
-    padding-left: 0%;
-    padding-right: 0%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-}
-
-.navButton {
-    padding-left: 25px;
-    /* padding-right: 10vw; */
-    order: 0;
-    /* position: relative; */
-    /* margin-top: 30px; */
-    font-size: 43px;
-    cursor: pointer;
-    color: rgba(255, 255, 255, 0.5);
-    padding-bottom: 0px;
-    transition: all 500ms ease;
-}
-
-
-.navButton:hover {
-    color: rgba(255, 255, 255, 1);
-    animation: glowing 2500ms infinite;
-}
-
-.logo {
-    /* padding-right: 20px; */
-    padding-right: 20px;
-    order: 1;
-    /* font-color: white; */
-}
-
-
-.headerplaceholder {
-    order: 2;
-}
-
-/* Keyframes */
 /* Fade in */
 @keyframes fadein {
     from {
@@ -386,6 +173,203 @@ header {
     100% {
         background: #0000FF;
     }
+}
+
+// ________________________________________________________________________________________________________________________
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* iframe as background */
+iframe {
+    z-index: -9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* canvas as background */
+/* canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+} */
+
+body {
+    overflow-x: hidden;
+    animation: rgb 100000ms infinite;
+
+    background: linear-gradient(270deg, #0000ff, #ff0000);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 12s ease infinite;
+    -moz-animation: AnimationName 12s ease infinite;
+    -o-animation: AnimationName 12s ease infinite;
+    animation: AnimationName 12s ease infinite;
+
+
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body,
+html {
+    margin: 0px;
+    color: white;
+    height: 100%;
+    line-height: 1.8;
+}
+
+.content {
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -ms-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    animation: fadein 2s;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin: 0px 0px 0px 90px;
+    padding: $titleSize*1.5 3.5vw 0 3.5vw;
+    flex-direction: column;
+    transition: 2s;
+    /* align-items: center; */
+}
+
+// .content h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//     font-style: italic;
+// }
+
+article {
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -ms-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    animation: fadein 2s;
+
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#title {
+    /* color: rgba(255, 255, 255, 0.5); */
+    /* padding-top: 10%; */
+    /* text-align: center; */
+    /* padding: 50px 10px; */
+    position: fixed;
+    height: $titleSize*1.75;
+    width: 100%;
+    color: black;
+    margin: 0px 0px 0px 90px;
+    background: $bgColour;
+    font-size: $titleSize;
+    padding-left: 5px;
+    font-weight: bold;
+    font-style: italic;
+    transition: 2s;
+}
+
+section {
+    -webkit-animation: fadein 2s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2s;
+    /* Internet Explorer */
+    -o-animation: fadein 2s;
+    /* Opera < 12.1 */
+    animation: fadein 2s;
+    padding: 14vw;
+}
+
+#element {
+    scrollbar-width: none;
+}
+
+/* Header */
+header {
+    // background: rgba(255, 255, 255, 0.75);
+    // background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 70%);
+    // border-bottom: 4px rgb(0, 0, 0) solid;
+    // padding-top: 0px;
+    background: $bgColour;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 90px;
+    height: 100%;
+    position: fixed;
+    /* Make it stick, even on scroll */
+    overflow: auto;
+    /* Enable scrolling if the sidenav has too much content */
+}
+
+.headercontainer {
+    /* position: fixed; */
+    padding-left: 0%;
+    padding-right: 0%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navButton {
+    /* position: relative; */
+    /* margin-top: 30px; */
+    /* padding-right: 10vw; */
+    padding-left: 25px;
+    order: 0;
+    font-size: 43px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.5);
+    padding-bottom: 0px;
+    transition: all 500ms ease;
+}
+
+.navButton:hover {
+    color: rgba(255, 255, 255, 1);
+    animation: glowing 2500ms infinite;
+}
+
+.logo {
+    /* padding-right: 20px; */
+    /* font-color: white; */
+    padding-right: 20px;
+    order: 1;
+}
+
+.headerplaceholder {
+    order: 2;
 }
 
 /* Off-canvas menu */
