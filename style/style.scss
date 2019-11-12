@@ -330,6 +330,16 @@ header {
     align-items: center;
 }
 
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    // background-color: red;
+    color: rgba(255,255,255,0.25);
+    text-align: center;
+  }
+
 .navButton {
     /* position: relative; */
     /* margin-top: 30px; */
