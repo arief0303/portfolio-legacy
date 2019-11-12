@@ -6,7 +6,7 @@
  * @link https://github.com/jonsuh/hamburgers
  */
 .hamburger {
-  padding: 23px 23px;
+  padding: 19px 23px;
   display: inline-block;
   cursor: pointer;
   -webkit-transition-property: opacity, -webkit-filter;
@@ -27,17 +27,17 @@
 }
 
 .hamburger:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .hamburger.is-active:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-  background-color: black;
+  background-color: #fff;
 }
 
 .hamburger-box {
@@ -56,7 +56,7 @@
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   width: 45px;
   height: 4px;
-  background-color: black;
+  background-color: #fff;
   border-radius: 4px;
   position: absolute;
   -webkit-transition-property: -webkit-transform;
@@ -1439,38 +1439,9 @@
   }
 }
 
-@-webkit-keyframes rgb {
-  0% {
-    background: #0000FF;
-  }
-  40% {
-    background: #480CE8;
-  }
-  60% {
-    background: #910DFF;
-  }
-  100% {
-    background: #0000FF;
-  }
-}
-
-@keyframes rgb {
-  0% {
-    background: #0000FF;
-  }
-  40% {
-    background: #480CE8;
-  }
-  60% {
-    background: #910DFF;
-  }
-  100% {
-    background: #0000FF;
-  }
-}
-
 html {
   scroll-behavior: smooth;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 ::-webkit-scrollbar {
@@ -1541,8 +1512,8 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 0px 0px 0px 90px;
-  padding: 82.5px 3.5vw 0 3.5vw;
+  margin: 0px 90px 0px 90px;
+  padding: 60px 3.5vw 0 3.5vw;
   -ms-flex-direction: column;
       flex-direction: column;
   -webkit-transition: 2s;
@@ -1563,12 +1534,10 @@ article {
   /* text-align: center; */
   /* padding: 50px 10px; */
   position: fixed;
-  height: 96.25px;
+  height: 70px;
   width: 100%;
-  color: black;
   margin: 0px 0px 0px 90px;
-  background: white;
-  font-size: 55px;
+  font-size: 40px;
   padding-left: 5px;
   font-weight: bold;
   font-style: italic;
@@ -1592,16 +1561,15 @@ section {
 
 /* Header */
 header {
-  background: white;
+  background: black;
   position: fixed;
   width: 100%;
   top: 0;
   margin: 0;
   padding: 0;
-  width: 90px;
-  height: 100%;
+  height: 68px;
+  width: 100%;
   position: fixed;
-  /* Make it stick, even on scroll */
   overflow: auto;
   /* Enable scrolling if the sidenav has too much content */
 }

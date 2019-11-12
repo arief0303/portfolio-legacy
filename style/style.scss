@@ -1,7 +1,8 @@
 @import "hamburgers";
-$bgColour: rgba(255, 255, 255, 1);
+$bgColour: rgba(0, 0, 0, 1);
 $headerPadding: 90px;
-$titleSize: 55px;
+$titleSize: 40px;
+$headerHeight: 68px;
 
 @-webkit-keyframes AnimationName {
     0% {
@@ -157,30 +158,15 @@ $titleSize: 55px;
     }
 }
 
-@keyframes rgb {
-    0% {
-        background: #0000FF;
-    }
-
-    40% {
-        background: #480CE8;
-    }
-
-    60% {
-        background: #910DFF;
-    }
-
-    100% {
-        background: #0000FF;
-    }
-}
-
 // ________________________________________________________________________________________________________________________
 
 html {
     scroll-behavior: smooth;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    // hide scrollbar on IE
 }
 
+// hide scrollbar on chrome
 ::-webkit-scrollbar {
     display: none;
 }
@@ -251,8 +237,10 @@ html {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-    margin: 0px 0px 0px 90px;
+    margin: 0px $headerPadding 0px $headerPadding;
     padding: $titleSize*1.5 3.5vw 0 3.5vw;
+    // margin-top: $titleSize;
+    // height:50%;
     flex-direction: column;
     transition: 2s;
     /* align-items: center; */
@@ -286,9 +274,9 @@ article {
     position: fixed;
     height: $titleSize*1.75;
     width: 100%;
-    color: black;
-    margin: 0px 0px 0px 90px;
-    background: $bgColour;
+    // color: black;
+    margin: 0px 0px 0px $headerPadding;
+    // background: $bgColour;
     font-size: $titleSize;
     padding-left: 5px;
     font-weight: bold;
@@ -325,10 +313,9 @@ header {
     top: 0;
     margin: 0;
     padding: 0;
-    width: 90px;
-    height: 100%;
+    height: $headerHeight;
+    width: 100%;
     position: fixed;
-    /* Make it stick, even on scroll */
     overflow: auto;
     /* Enable scrolling if the sidenav has too much content */
 }
