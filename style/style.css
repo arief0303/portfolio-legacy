@@ -1442,6 +1442,7 @@
 html {
   scroll-behavior: smooth;
   -ms-overflow-style: -ms-autohiding-scrollbar;
+  scrollbar-width: none;
 }
 
 ::-webkit-scrollbar {
@@ -1557,6 +1558,7 @@ section {
 
 /* Header */
 header {
+  scrollbar-width: none;
   z-index: 1;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(black));
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, black 100%);
@@ -1592,11 +1594,13 @@ header {
 }
 
 footer {
+  z-index: -10;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  color: rgba(255, 255, 255, 0.25);
+  height: 60%;
+  color: rgba(255, 255, 255, 0.4);
   text-align: center;
 }
 
