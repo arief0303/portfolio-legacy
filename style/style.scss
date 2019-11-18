@@ -1,5 +1,5 @@
 @import "hamburgers";
-$bgColour: rgba(0, 0, 0, 1);
+$titleBgColour: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 1) 100%);
 $headerPadding: 90px;
 $titleSize: 40px;
 $headerHeight: 68px;
@@ -216,12 +216,34 @@ html {
     line-height: 1.8;
 }
 
+#title {
+    z-index: 1;
+    /* color: rgba(255, 255, 255, 0.5); */
+    /* padding-top: 10%; */
+    /* text-align: center; */
+    /* padding: 50px 10px; */
+    position: fixed;
+    height: $titleSize*1.75;
+    width: 100%;
+    // color: black;
+    margin: 0px 0px 0px $headerPadding;
+    // background: $bgColour;
+    font-size: $titleSize;
+    padding-left: 5px;
+    font-weight: bold;
+    font-style: italic;
+    transition: 3s;
+}
+
 .content {
     -webkit-animation: fadein 2s;
     -moz-animation: fadein 2s;
     -ms-animation: fadein 2s;
     -o-animation: fadein 2s;
     animation: fadein 2s;
+
+    background: rgba(255, 255, 255, 0.75);
+    color: black;
 
     display: flex;
     justify-content: flex-start;
@@ -255,24 +277,6 @@ article {
     margin-bottom: 25px;
 }
 
-#title {
-    /* color: rgba(255, 255, 255, 0.5); */
-    /* padding-top: 10%; */
-    /* text-align: center; */
-    /* padding: 50px 10px; */
-    position: fixed;
-    height: $titleSize*1.75;
-    width: 100%;
-    // color: black;
-    margin: 0px 0px 0px $headerPadding;
-    // background: $bgColour;
-    font-size: $titleSize;
-    padding-left: 5px;
-    font-weight: bold;
-    font-style: italic;
-    transition: 2s;
-}
-
 section {
     -webkit-animation: fadein 2s;
     /* Safari, Chrome and Opera > 12.1 */
@@ -296,7 +300,8 @@ header {
     // background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 70%);
     // border-bottom: 4px rgb(0, 0, 0) solid;
     // padding-top: 0px;
-    background: $bgColour;
+    z-index: 1;
+    background: $titleBgColour;
     position: fixed;
     width: 100%;
     top: 0;
@@ -325,9 +330,9 @@ footer {
     bottom: 0;
     width: 100%;
     // background-color: red;
-    color: rgba(255,255,255,0.25);
+    color: rgba(255, 255, 255, 0.25);
     text-align: center;
-  }
+}
 
 .navButton {
     /* position: relative; */

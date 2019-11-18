@@ -1492,9 +1492,29 @@ html {
   line-height: 1.8;
 }
 
+#title {
+  z-index: 1;
+  /* color: rgba(255, 255, 255, 0.5); */
+  /* padding-top: 10%; */
+  /* text-align: center; */
+  /* padding: 50px 10px; */
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  margin: 0px 0px 0px 90px;
+  font-size: 40px;
+  padding-left: 5px;
+  font-weight: bold;
+  font-style: italic;
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+
 .content {
   -webkit-animation: fadein 2s;
   animation: fadein 2s;
+  background: rgba(255, 255, 255, 0.75);
+  color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1521,23 +1541,6 @@ article {
   margin-bottom: 25px;
 }
 
-#title {
-  /* color: rgba(255, 255, 255, 0.5); */
-  /* padding-top: 10%; */
-  /* text-align: center; */
-  /* padding: 50px 10px; */
-  position: fixed;
-  height: 70px;
-  width: 100%;
-  margin: 0px 0px 0px 90px;
-  font-size: 40px;
-  padding-left: 5px;
-  font-weight: bold;
-  font-style: italic;
-  -webkit-transition: 2s;
-  transition: 2s;
-}
-
 section {
   -webkit-animation: fadein 2s;
   /* Safari, Chrome and Opera > 12.1 */
@@ -1554,7 +1557,9 @@ section {
 
 /* Header */
 header {
-  background: black;
+  z-index: 1;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(black));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, black 100%);
   position: fixed;
   width: 100%;
   top: 0;
