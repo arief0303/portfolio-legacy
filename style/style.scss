@@ -1,7 +1,7 @@
 @import "hamburgers";
 $titleBgColour: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 1) 100%);
 $headerPadding: 90px;
-$titleSize: 40px;
+$titleSize: 39px;
 $headerHeight: 68px;
 
 @-webkit-keyframes AnimationName {
@@ -226,7 +226,7 @@ html {
     height: $titleSize*1.75;
     width: 100%;
     // color: black;
-    margin: 0px 0px 0px $headerPadding;
+    margin: 0px 0px 0px $headerPadding+10px;
     // background: $bgColour;
     font-size: $titleSize;
     padding-left: 5px;
@@ -338,31 +338,6 @@ footer {
     // background-color: red;
     color: rgba(255, 255, 255, 0.4);
     text-align: center;
-}
-
-.navButton {
-    /* position: relative; */
-    /* margin-top: 30px; */
-    /* padding-right: 10vw; */
-    padding-left: 25px;
-    order: 0;
-    font-size: 43px;
-    cursor: pointer;
-    color: rgba(255, 255, 255, 0.5);
-    padding-bottom: 0px;
-    transition: all 500ms ease;
-}
-
-.navButton:hover {
-    color: rgba(255, 255, 255, 1);
-    animation: glowing 2500ms infinite;
-}
-
-.logo {
-    /* padding-right: 20px; */
-    /* font-color: white; */
-    padding-right: 20px;
-    order: 1;
 }
 
 .headerplaceholder {
