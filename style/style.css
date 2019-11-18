@@ -1500,10 +1500,10 @@ html {
   /* text-align: center; */
   /* padding: 50px 10px; */
   position: fixed;
-  height: 68.25px;
+  height: 70px;
   width: 100%;
   margin: 0px 0px 0px 100px;
-  font-size: 39px;
+  font-size: 40px;
   padding-left: 5px;
   font-weight: bold;
   font-style: italic;
@@ -1527,7 +1527,7 @@ html {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 0px 90px 0px 90px;
-  padding: 58.5px 3.5vw 0 3.5vw;
+  padding: 60px 3.5vw 0 3.5vw;
   -ms-flex-direction: column;
       flex-direction: column;
   -webkit-transition: 2s;
