@@ -172,7 +172,7 @@ html {
 }
 
 /* iframe as background */
-iframe {
+.visualiframe {
     z-index: -9999;
     top: 0;
     left: 0;
@@ -222,7 +222,7 @@ html {
     /* padding-top: 10%; */
     /* text-align: center; */
     /* padding: 50px 10px; */
-    position: fixed;
+    // position: fixed;
     height: $titleSize*1.75;
     width: 100%;
     // color: black;
@@ -248,13 +248,19 @@ html {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-    margin: 0px $headerPadding 0px $headerPadding;
+    margin: $titleSize*1.75 $headerPadding 0px $headerPadding;
     padding: $titleSize*1.5 3.5vw 0 3.5vw;
     // margin-top: $titleSize;
     // height:50%;
     flex-direction: column;
     transition: 2s;
     /* align-items: center; */
+
+    top: 0;
+    bottom:0;
+    position:fixed;
+    overflow-y:scroll;
+    overflow-x:hidden;
 }
 
 // .content h1,
@@ -297,13 +303,12 @@ section {
 /* Header */
 header {
     scrollbar-width: none; // disable header scrollbar bug on mf
-
     // background: rgba(255, 255, 255, 0.75);
     // background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 70%);
     // border-bottom: 4px rgb(0, 0, 0) solid;
     // padding-top: 0px;
     z-index: 1;
-    background: $titleBgColour;
+    // background: $titleBgColour;
     position: fixed;
     width: 100%;
     top: 0;
@@ -312,7 +317,7 @@ header {
     height: $headerHeight;
     width: 100%;
     position: fixed;
-    overflow: auto;
+    overflow: hidden;
     /* Enable scrolling if the sidenav has too much content */
 }
 

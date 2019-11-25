@@ -1450,7 +1450,7 @@ html {
 }
 
 /* iframe as background */
-iframe {
+.visualiframe {
   z-index: -9999;
   top: 0;
   left: 0;
@@ -1499,7 +1499,6 @@ html {
   /* padding-top: 10%; */
   /* text-align: center; */
   /* padding: 50px 10px; */
-  position: fixed;
   height: 70px;
   width: 100%;
   margin: 0px 0px 0px 100px;
@@ -1526,13 +1525,18 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 0px 90px 0px 90px;
+  margin: 70px 90px 0px 90px;
   padding: 60px 3.5vw 0 3.5vw;
   -ms-flex-direction: column;
       flex-direction: column;
   -webkit-transition: 2s;
   transition: 2s;
   /* align-items: center; */
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 article {
@@ -1560,8 +1564,6 @@ section {
 header {
   scrollbar-width: none;
   z-index: 1;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(black));
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, black 100%);
   position: fixed;
   width: 100%;
   top: 0;
@@ -1570,7 +1572,7 @@ header {
   height: 68px;
   width: 100%;
   position: fixed;
-  overflow: auto;
+  overflow: hidden;
   /* Enable scrolling if the sidenav has too much content */
 }
 
