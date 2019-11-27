@@ -31,11 +31,11 @@ var renderer = new THREE.WebGLRenderer({
   
   
   // manual camera adjust
-  camera.position.set(0, 0, -0.5);
+  camera.position.set(0, -5, 0);
   controls.update(); //controls.update() must be called after any manual changes to the camera's transform
   
   // object1
-  var geometry1 = new THREE.TetrahedronGeometry(1, 0); //object1 geometry
+  var geometry1 = new THREE.SphereGeometry(1,32 ,32); //object1 geometry
   var material1 = new THREE.MeshNormalMaterial(); //object1 material
   // var mesh1 = new THREE.Mesh(geometry1, material1); //object1 mesh
   // scene.add(mesh1); //add object1 to scene
@@ -44,7 +44,7 @@ var renderer = new THREE.WebGLRenderer({
   var objArray = [];
   for (let i = 0; i <= 16; i++) {
     var meshes = new THREE.Mesh(geometry1, material1);
-    meshes.position.set(i - 3.5, i, i);
+    meshes.position.set(i-2, i+6, i-4);
     
     if (i == 0) {
       scene.add(meshes);
