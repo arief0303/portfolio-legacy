@@ -1515,7 +1515,7 @@ embed {
   transition: 3s;
 }
 
-.content {
+#content {
   -webkit-animation: fadein 2s;
   animation: fadein 2s;
   -webkit-box-shadow: 0px 15px 30px black;

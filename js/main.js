@@ -15,9 +15,36 @@ function closeNav() {
 // Look for .hamburger
 var hamburger = document.querySelector(".hamburger");
 // On click
-hamburger.addEventListener("click", function() {
+hamburger.addEventListener("click", function () {
   // Toggle class "is-active"
   hamburger.classList.toggle("is-active");
-  if(hamburger.className == "hamburger hamburger--collapse is-active"){openNav();}
-  else{closeNav();}
+  if (hamburger.className == "hamburger hamburger--collapse is-active") {
+    openNav();
+  } else {
+    closeNav();
+  }
 });
+
+var curScroll = 0;
+
+function controlScroll (e) {
+    var evt = window.event || e;
+    var delta = evt.detail? evt.detail*(-120) : evt.wheelDelta;
+    if(delta < 0) {
+        //scroll down
+        curScroll += 10;
+    }
+    else {
+        //scroll up
+        curScroll -= 10;
+    }
+    document.getElementById('content').scrollTop = curScroll;
+}; 
+
+if (document.attachEvent) {//if IE (and Opera depending on user setting)
+    document.attachEvent("onmousewheel", controlScroll)
+        
+}
+else if (document.addEventListener) { //WC3 browsers
+    document.addEventListener("mousewheel", controlScroll, false)
+}
