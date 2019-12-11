@@ -32,13 +32,15 @@ function controlScroll (e) {
     var delta = evt.detail? evt.detail*(-120) : evt.wheelDelta;
     if(delta < 0) {
         //scroll down
-        curScroll += 10;
+        curScroll += 25;
     }
     else {
         //scroll up
-        curScroll -= 10;
+        curScroll -= 25;
     }
     document.getElementById('content').scrollTop = curScroll;
+    console.log(document.getElementById('content').scrollTop);
+    
 }; 
 
 if (document.attachEvent) {//if IE (and Opera depending on user setting)
@@ -48,3 +50,50 @@ if (document.attachEvent) {//if IE (and Opera depending on user setting)
 else if (document.addEventListener) { //WC3 browsers
     document.addEventListener("mousewheel", controlScroll, false)
 }
+
+/*var curScroll = 0;
+
+$(window).on('mousewheel DOMMouseScroll', 'body', function(e){
+    var evt = window.event || e;
+    var delta = evt.detail? evt.detail*(-120) : evt.wheelDelta;
+    var loc = $('#content').scrollTop() + $('#content').innerHeight();
+    var height = $('#content')[0].scrollHeight - 10;
+    var height2 = $('#content')[0].scrollHeight - $('#content').innerHeight();
+    if(delta < 0) {
+        //scroll down
+        if (curScroll < height2) {
+            curScroll += 10;
+        }
+    }
+    else {
+        //scroll up
+        if (curScroll > 0) {
+            curScroll -= 10;
+        }
+    }
+    if (loc >= height && !$('#content').hasClass('appended')) {
+        var moreContent ='<a href="google.com">a link</a>';
+        $('#content').append(moreContent);
+        $('#content').addClass('appended');
+        console.log('appended');
+    }
+    $('#content').scrollTop(curScroll);
+    return true;
+}); */
+
+var curScroll = 0;
+
+$(window).bind('mousewheel DOMMouseScroll', function(e){
+    var evt = window.event || e;
+    var delta = evt.detail? evt.detail*(-120) : evt.wheelDelta;
+    if(delta < 0) {
+        //scroll down
+        curScroll += 20;
+    }
+    else {
+        //scroll up
+        curScroll -= 20;
+    }
+    $('#content').scrollTop(curScroll);
+    return true;
+}); 
