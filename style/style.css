@@ -1515,6 +1515,7 @@ embed {
 }
 
 #content {
+  z-index: 3;
   -webkit-animation: fadein 2s;
   animation: fadein 2s;
   -webkit-box-shadow: 0px 15px 30px black;
@@ -1532,7 +1533,7 @@ embed {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 0 90px 0px 90px;
-  padding: 0 5vw 0 5vw;
+  padding: 1vw 5vw 1vw 5vw;
   -ms-flex-direction: column;
       flex-direction: column;
   -webkit-transition: 2s;
@@ -1543,6 +1544,29 @@ embed {
   position: fixed;
   position: relative;
   overflow-y: hidden;
+}
+
+.learningOutcome {
+  -webkit-animation: fadein 1s;
+  animation: fadein 1s;
+  margin: 0px 90px 0px 90px;
+  padding: 1vw 5vw 1vw 5vw;
+  background: rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 30px black;
+          box-shadow: 0px 0px 30px black;
+  color: white;
+}
+
+.contentDivider {
+  z-index: 0;
+  -webkit-animation: fadein 1s;
+  animation: fadein 1s;
+  margin: 0px 90px 0px 90px;
+  padding: 1vw 5vw 1vw 5vw;
+  background: blue;
+  -webkit-box-shadow: 0px 0px 30px blue;
+          box-shadow: 0px 0px 30px blue;
+  color: white;
 }
 
 .feedback {

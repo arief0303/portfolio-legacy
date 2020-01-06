@@ -5,6 +5,7 @@ $headerPadding: 90px;
 $titleSize: 8vw;
 $headerHeight: 68px;
 $varWidth: 14vw;
+$contentPadding: 1vw 5vw 1vw 5vw;
 
 @-webkit-keyframes AnimationName {
     0% {
@@ -218,7 +219,10 @@ html {
     line-height: 1.8;
 }
 
-embed{width: 100%; height: 700px;}
+embed {
+    width: 100%;
+    height: 700px;
+}
 
 #title {
     // position: fixed;
@@ -248,6 +252,8 @@ embed{width: 100%; height: 700px;}
     // position: relative;
     // overflow-y: hidden;
     
+    z-index: 3;
+
     -webkit-animation: fadein 2s;
     -moz-animation: fadein 2s;
     -ms-animation: fadein 2s;
@@ -265,7 +271,7 @@ embed{width: 100%; height: 700px;}
     // margin: $titleSize*1.75 $headerPadding 0px $headerPadding;
     margin: 0 $headerPadding 0px $headerPadding;
 
-    padding: 0 5vw 0 5vw;
+    padding: $contentPadding;
     // margin-top: $titleSize;
     // height:50%;
     flex-direction: column;
@@ -281,6 +287,35 @@ embed{width: 100%; height: 700px;}
     position: relative;
     overflow-y: hidden;
 
+}
+
+.learningOutcome {
+    -webkit-animation: fadein 1s;
+    -moz-animation: fadein 1s;
+    -ms-animation: fadein 1s;
+    -o-animation: fadein 1s;
+    animation: fadein 1s;
+
+    margin: 0px $headerPadding 0px $headerPadding;
+    padding: $contentPadding;
+    background: rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 30px black;
+    color: white;
+}
+
+.contentDivider {
+    z-index: 0;
+    -webkit-animation: fadein 1s;
+    -moz-animation: fadein 1s;
+    -ms-animation: fadein 1s;
+    -o-animation: fadein 1s;
+    animation: fadein 1s;
+
+    margin: 0px $headerPadding 0px $headerPadding;
+    padding: $contentPadding;
+    background: rgba(0, 0, 255, 1);
+    box-shadow: 0px 0px 30px blue;
+    color: white;
 }
 
 .feedback {
@@ -449,15 +484,15 @@ footer {
     .sidenav a {
         font-size: 18px;
     }
-    
+
 }
 
 // Fit content to smaller screens
-@media only screen and (max-width: 40em) { 
+@media only screen and (max-width: 40em) {
 
     #content {
-	  margin:0px;	
-      padding:0px;
+        margin: 0px;
+        padding: 0px;
     }
-				
+
 }
