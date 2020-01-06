@@ -51,11 +51,35 @@ else if (document.addEventListener) { //WC3 browsers
     document.addEventListener("mousewheel", controlScroll, false)
 }
 
+//Plus minus toggle script
 $(function() {
     $('.plus-minus-toggle').on('click', function() {
       $(this).toggleClass('collapsed');
     });
   });
+
+  function toggleDocs(event) {
+
+    if (event.target && event.target.className == 'plus-minus-toggle' || event.target && event.target.className == 'plus-minus-toggle collapsed') {
+
+        var next = event.target.nextElementSibling;
+
+
+        if (next.style.display == "none") {
+            next.style.display = "block";
+
+        } else {
+            next.style.display = "none";
+        }
+    }
+}
+
+document.addEventListener('click', toggleDocs, true);
+
+  /*function plusMinusToggle() {
+    var x = document.getElementById("plus-minus-toggle collapsed");
+
+}*/
 
 /*
 var curScroll = 0;
