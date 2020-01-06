@@ -476,3 +476,32 @@ footer {
         margin: 0px;
     }
 }
+
+.plus-minus-toggle {
+    cursor: pointer;
+    height: 21px;
+    position: relative;
+    width: 21px;
+    &:before,
+    &:after{
+      background: #fff;
+      content: '';
+      height: 5px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 21px;
+      transition: transform 500ms ease;
+    }
+    &:after {
+      transform-origin: center;
+    }
+    &.collapsed {
+      &:after {
+        transform: rotate(90deg);
+      }
+      &:before {
+        transform: rotate(180deg);
+      }
+    }
+  }
