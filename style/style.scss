@@ -5,7 +5,7 @@ $headerPadding: 90px;
 $titleSize: 8vw;
 $headerHeight: 68px;
 $varWidth: 14vw;
-$contentPadding: 1vw 5vw 1vw 5vw;
+$contentPadding: 2vw 5vw 2vw 5vw;
 
 @-webkit-keyframes AnimationName {
     0% {
@@ -251,7 +251,7 @@ embed {
     // overflow: auto;
     // position: relative;
     // overflow-y: hidden;
-    
+
     z-index: 3;
 
     -webkit-animation: fadein 2s;
@@ -289,7 +289,7 @@ embed {
 
 }
 
-.learningOutcome {
+#learningOutcome {
     -webkit-animation: fadein 1s;
     -moz-animation: fadein 1s;
     -ms-animation: fadein 1s;
@@ -321,6 +321,13 @@ embed {
 .feedback {
     padding: 1px 20px 20px;
     background: rgba(0, 0, 0, 0.5);
+    margin: 10px 0px 10px;
+    color: white;
+}
+
+.contentPlaceholder {
+    padding: 1px 20px 20px;
+    background: rgba(255, 255, 255, 0.5);
     margin: 10px 0px 10px;
     color: white;
 }
@@ -490,7 +497,9 @@ footer {
 // Fit content to smaller screens
 @media only screen and (max-width: 40em) {
 
-    #content {
+    #content,
+    #learningOutcome,
+    .contentDivider {
         margin: 0px;
         padding: 0px;
     }
