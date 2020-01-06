@@ -1499,23 +1499,27 @@ embed {
 }
 
 #title {
-  z-index: 1;
-  /* color: rgba(255, 255, 255, 0.5); */
-  /* padding-top: 10%; */
-  /* text-align: center; */
-  /* padding: 50px 10px; */
-  height: 14vw;
-  width: 100%;
-  font-size: 8vw;
-  font-weight: bold;
-  font-style: italic;
+  -webkit-animation: fadein 1s;
+  animation: fadein 1s;
   -webkit-transition: 3s;
   transition: 3s;
-  text-align: center;
+  margin: 0px 90px 0px 90px;
+  padding: 2vw 5vw 2vw 5vw;
+  background: blue;
+  -webkit-box-shadow: 0px 0px 30px blue;
+          box-shadow: 0px 0px 30px blue;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.titleText {
+  margin: 25px;
+  font-size: 1px;
 }
 
 #content {
-  z-index: 3;
   -webkit-animation: fadein 2s;
   animation: fadein 2s;
   -webkit-box-shadow: 0px 15px 30px black;
@@ -1549,6 +1553,8 @@ embed {
 #learningOutcome {
   -webkit-animation: fadein 1s;
   animation: fadein 1s;
+  -webkit-transition: 2s;
+  transition: 2s;
   margin: 0px 90px 0px 90px;
   padding: 2vw 5vw 2vw 5vw;
   background: rgba(0, 0, 0, 0.75);
@@ -1558,14 +1564,15 @@ embed {
 }
 
 .contentDivider {
-  z-index: 0;
   -webkit-animation: fadein 1s;
   animation: fadein 1s;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
   margin: 0px 90px 0px 90px;
   padding: 2vw 5vw 2vw 5vw;
-  background: blue;
-  -webkit-box-shadow: 0px 0px 30px blue;
-          box-shadow: 0px 0px 30px blue;
+  background: rgba(150, 150, 150, 0.75);
+  -webkit-box-shadow: 0px 0px 30px black;
+          box-shadow: 0px 0px 30px black;
   color: white;
 }
 
@@ -1617,8 +1624,8 @@ section {
 
 /* Header */
 header {
-  scrollbar-width: none;
   z-index: 1;
+  scrollbar-width: none;
   position: fixed;
   width: 100%;
   top: 0;
@@ -1699,15 +1706,6 @@ footer {
   color: #818181;
 }
 
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   -webkit-transition: margin-left .5s;
@@ -1715,22 +1713,10 @@ footer {
   /* padding: 20px; */
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
-}
-
 @media only screen and (max-width: 40em) {
   #content,
-  #learningOutcome,
-  .contentDivider {
+  #learningOutcome, #title, .contentDivider, .titleText {
     margin: 0px;
-    padding: 0px;
   }
 }
 /*# sourceMappingURL=style.css.map */
