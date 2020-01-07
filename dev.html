@@ -18,6 +18,7 @@ background-size: 400% 400%;
 -o-animation: AnimationName 12s ease infinite;
 animation: AnimationName 12s ease infinite;">
         
+        <div>
         <header id="main">
             <button class="hamburger hamburger--collapse" type="button">
                 <span class="hamburger-box">
@@ -53,11 +54,13 @@ animation: AnimationName 12s ease infinite;">
                     presentation aspect of the site, and JavaScript to transform a static HTML page into a dynamic
                     interface.
                 </p>
+
                 <div class="feedback">
                     <h1>Feedback</h1>
                     <div class="plus-minus-toggle collapsed"></div>
-                    <p style="display: block; font-style: italic;">No feedback provided yet.</p>
+                    <p style="display: none;font-style: italic;">No feedback provided yet.</p>
                 </div>
+
             </article>
             <article>
                 <h2 style="font-size: 40px;margin-bottom: 0;">Source Control, A Life Saving Tool</h2>
@@ -68,7 +71,8 @@ animation: AnimationName 12s ease infinite;">
             </article>
             <div class="feedback">
                 <h1>Feedback</h1>
-                <p style="font-style: italic;">No feedback provided yet.</p>
+                <div class="plus-minus-toggle collapsed"></div>
+                <p style="display: none;font-style: italic;">No feedback provided yet.</p>
             </div>
             <article>
                 <h2 style="font-size: 40px;margin-bottom: 0;">Honing JavaScript</h2>
@@ -80,14 +84,15 @@ animation: AnimationName 12s ease infinite;">
                     JavaScript skill and i have been always intrigued on the art of making visuals.
                     So i decided that i want to "hit two birds with one stone" by trying to make an interactive visual
                     art by using Three.js(a JavaScript library used to create and display animated 3D computer graphics
-                    in a web browser) that you can see is now used as a dynamic background for this
+                    in a web browser) that you can see is now used as a dynamic background of this
                     portofolio.</p>
-            </article>
-            <div class="feedback">
+                    <div class="feedback">
                 <h1>Feedback</h1>
-                <!-- <img src="" class="feedbackThumbnail"></img> -->
-                <p style="font-style: italic;">"No feedback provided yet."</p>
+                <div class="plus-minus-toggle collapsed"></div>
+                <p style="display: none;font-style: italic;">No feedback provided yet.</p>
             </div>
+            </article>
+            
             <article>
                 <h2 style="font-size: 40px;margin-bottom: 0;">SCSS</h2>
                 <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint 2</h1>
@@ -95,13 +100,16 @@ animation: AnimationName 12s ease infinite;">
                     ability to reduce the repetition of code and therefore saves time. I also find it very helpful to
                     have additional features such as importing additional SCSS to make a more comprehensive development.
                 </p>
+                <div class="feedback">
+                    <h1>Feedback</h1>
+                    <div class="plus-minus-toggle collapsed"></div>
+                    <p style="display: none;font-style: italic;">"I managed to learn SCSS within a week after asking Erik of its
+                        functionality as i find it to be a very useful tool.
+
+                        "</p>
+                </div>
             </article>
-            <div class="feedback">
-                <h1>Feedback</h1>
-                <!-- <img src="" class="feedbackThumbnail"></img> -->
-                <p style="font-style: italic;">"I managed to learn SCSS within a week after asking Erik of its
-                    functionality as i find it to be a very useful tool."</p>
-            </div>
+
             <article>
                 <h2 style="font-size: 40px;margin-bottom: 0;">Responsive Web Design</h2>
                 <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint 3</h1>
@@ -114,10 +122,13 @@ animation: AnimationName 12s ease infinite;">
             </article>
             <div class="feedback">
                 <h1>Feedback</h1>
-                <!-- <img src="" class="feedbackThumbnail"></img> -->
-                <p style="font-style: italic;">"No feedback provided yet."</p>
+                <div class="plus-minus-toggle collapsed"></div>
+                <p style="display: none;font-style: italic;">"No feedback provided yet."</p>
             </div>
         </section>
+        </div>
+
+
     <!-- OFF-CANVAS MENU____________________________________________________________________________________________________________ -->
     <div id="mySidenav" class="sidenav">
         <a href="index.html">Home</a>
