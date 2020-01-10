@@ -224,6 +224,19 @@ embed {
     height: 700px;
 }
 
+#home {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+    position: fixed;
+    background: none;
+    color: white;
+    box-shadow: none;
+}
+
 #title {
     -webkit-animation: fadein 1s;
     -moz-animation: fadein 1s;
@@ -247,7 +260,10 @@ embed {
     // text-align: center;
 }
 
-.titleText{margin: 25px;font-size: 1px;}
+.titleText {
+    margin: 25px;
+    font-size: 1px;
+}
 
 #content {
     // height: 200px;
@@ -272,21 +288,20 @@ embed {
 
     background: rgba(255, 255, 255, 0.75);
     color: black;
-    
+
     // margin-top: $titleSize;
     // height:50%;
     transition: 2s;
     /* align-items: center; */
 
-    top: 0;
-    bottom: 0;
+    // top: 0;
+    // bottom: 0;
     // position: fixed;
     // overflow: auto;
     // overflow-y: hidden;
     // overflow: auto;
-    position: relative;
+    // position: relative;
     overflow-y: hidden;
-
 }
 
 #learningOutcome {
@@ -337,12 +352,12 @@ embed {
     // flex-wrap: wrap;
     // align-content: center;
 
-    
+
     padding: 40px;
     background: rgba(255, 255, 255, 0.5);
     margin: 10px 0px 10px;
     color: white;
-    
+
 }
 
 .feedbackThumbnail {
@@ -400,7 +415,7 @@ header {
     // background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 70%);
     // border-bottom: 4px rgb(0, 0, 0) solid;
     // padding-top: 0px;
-    
+
     // background: $titleBgColour;
     position: fixed;
     width: 100%;
@@ -481,8 +496,12 @@ footer {
 
 // Fit content to smaller screens
 @media only screen and (max-width: 40em) {
+
     #content,
-    #learningOutcome, #title, .contentDivider, .titleText{
+    #learningOutcome,
+    #title,
+    .contentDivider,
+    .titleText {
         margin: 0px;
     }
 }
@@ -492,26 +511,30 @@ footer {
     height: 21px;
     position: relative;
     width: 21px;
+
     &:before,
-    &:after{
-      background: #fff;
-      content: '';
-      height: 5px;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 21px;
-      transition: transform 500ms ease;
-    }
     &:after {
-      transform-origin: center;
+        background: #fff;
+        content: '';
+        height: 5px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 21px;
+        transition: transform 500ms ease;
     }
+
+    &:after {
+        transform-origin: center;
+    }
+
     &.collapsed {
-      &:after {
-        transform: rotate(90deg);
-      }
-      &:before {
-        transform: rotate(180deg);
-      }
+        &:after {
+            transform: rotate(90deg);
+        }
+
+        &:before {
+            transform: rotate(180deg);
+        }
     }
-  }
+}

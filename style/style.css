@@ -1498,6 +1498,20 @@ embed {
   height: 700px;
 }
 
+#home {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  position: fixed;
+  background: none;
+  color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 #title {
   -webkit-animation: fadein 1s;
   animation: fadein 1s;
@@ -1532,9 +1546,6 @@ embed {
   -webkit-transition: 2s;
   transition: 2s;
   /* align-items: center; */
-  top: 0;
-  bottom: 0;
-  position: relative;
   overflow-y: hidden;
 }
 
@@ -1705,7 +1716,10 @@ footer {
 
 @media only screen and (max-width: 40em) {
   #content,
-  #learningOutcome, #title, .contentDivider, .titleText {
+  #learningOutcome,
+  #title,
+  .contentDivider,
+  .titleText {
     margin: 0px;
   }
 }
