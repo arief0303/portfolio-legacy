@@ -238,11 +238,12 @@ embed {
     box-shadow: 0px 0px 30px blue;
     color: white;
 
-    // height: $titleSize*1.75;
-    // width: 100%;
+    text-align: center;
     font-size: 40px;
     font-weight: bold;
     font-style: italic;
+    // height: $titleSize*1.75;
+    // width: 100%;
     // text-align: center;
 }
 
@@ -257,33 +258,29 @@ embed {
 
     // z-index: 3;
 
+    // flex-direction: row;
+    margin: 0 $headerPadding 0px $headerPadding;
+    padding: $contentPadding;
+
     -webkit-animation: fadein 2s;
     -moz-animation: fadein 2s;
     -ms-animation: fadein 2s;
     -o-animation: fadein 2s;
     animation: fadein 2s;
 
-    box-shadow: 0px 15px 30px black;
+    box-shadow: 0px 0px 30px black;
 
     background: rgba(255, 255, 255, 0.75);
     color: black;
-
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    // margin: $titleSize*1.75 $headerPadding 0px $headerPadding;
-    margin: 0 $headerPadding 0px $headerPadding;
-
-    padding: $contentPadding;
+    
     // margin-top: $titleSize;
     // height:50%;
-    flex-direction: column;
     transition: 2s;
     /* align-items: center; */
 
     top: 0;
     bottom: 0;
-    position: fixed;
+    // position: fixed;
     // overflow: auto;
     // overflow-y: hidden;
     // overflow: auto;
@@ -333,10 +330,19 @@ embed {
 }
 
 .contentPlaceholder {
-    padding: 1px 20px 20px;
+    // padding: 1px 2padding: 40px;0px 20px;
+    // display: inline-flex;
+    // justify-content: center;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // align-content: center;
+
+    
+    padding: 40px;
     background: rgba(255, 255, 255, 0.5);
     margin: 10px 0px 10px;
     color: white;
+    
 }
 
 .feedbackThumbnail {
@@ -450,7 +456,7 @@ footer {
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
-    box-shadow: 0px 15px 50px black;
+    box-shadow: 0px 15px 40px black;
 }
 
 /* The navigation menu links */

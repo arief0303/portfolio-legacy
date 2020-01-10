@@ -1509,6 +1509,7 @@ embed {
   -webkit-box-shadow: 0px 0px 30px blue;
           box-shadow: 0px 0px 30px blue;
   color: white;
+  text-align: center;
   font-size: 40px;
   font-weight: bold;
   font-style: italic;
@@ -1520,32 +1521,19 @@ embed {
 }
 
 #content {
-  -webkit-animation: fadein 2s;
-  animation: fadein 2s;
-  -webkit-box-shadow: 0px 15px 30px black;
-          box-shadow: 0px 15px 30px black;
-  background: rgba(255, 255, 255, 0.75);
-  color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   margin: 0 90px 0px 90px;
   padding: 2vw 5vw 2vw 5vw;
-  -ms-flex-direction: column;
-      flex-direction: column;
+  -webkit-animation: fadein 2s;
+  animation: fadein 2s;
+  -webkit-box-shadow: 0px 0px 30px black;
+          box-shadow: 0px 0px 30px black;
+  background: rgba(255, 255, 255, 0.75);
+  color: black;
   -webkit-transition: 2s;
   transition: 2s;
   /* align-items: center; */
   top: 0;
   bottom: 0;
-  position: fixed;
   position: relative;
   overflow-y: hidden;
 }
@@ -1584,7 +1572,7 @@ embed {
 }
 
 .contentPlaceholder {
-  padding: 1px 20px 20px;
+  padding: 40px;
   background: rgba(255, 255, 255, 0.5);
   margin: 10px 0px 10px;
   color: white;
@@ -1689,8 +1677,8 @@ footer {
   padding-top: 60px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-box-shadow: 0px 15px 50px black;
-          box-shadow: 0px 15px 50px black;
+  -webkit-box-shadow: 0px 15px 40px black;
+          box-shadow: 0px 15px 40px black;
 }
 
 /* The navigation menu links */
