@@ -1689,6 +1689,11 @@ embed {
   color: white;
 }
 
+#feedbackExpandButton {
+  position: relative;
+  left: 40px;
+}
+
 .contentPlaceholder {
   padding: 40px;
   background: rgba(255, 255, 255, 0.5);
