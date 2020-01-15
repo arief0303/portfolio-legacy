@@ -109,20 +109,119 @@ animation: AnimationName 12s ease infinite;">
                 </div>
             </article>-->
             <article>
-                <h2 style="font-size: 40px;margin-bottom: 0;">Interactive Visual Art</h2>
+                <h2 style="font-size: 40px;margin-bottom: 0;">Interactive Visual Art with ThreeJS</h2>
 
                 <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint 2</h1>
 
                 <!-- <p>I've always been intrigued on making web graphics visuals</p> -->
                 <!-- <p>As an exercise to sharpen my JavaScript skills. </p> -->
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum sit amet purus dignissim
-                    accumsan. Suspendisse sed scelerisque massa, vel facilisis justo.</p>
-                <!-- <p>I have always been intrigued of visuals </p> -->
-
+                <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum sit amet purus dignissim
+                    accumsan. Suspendisse sed scelerisque massa, vel facilisis justo.</p>-->
+                <p>As part of the process for me to practice my Javascript skills i decided to make an interactive
+                    visual that is <em>now playing on the background of this site</em> by using ThreeJS web 3D graphics
+                    library.</p>
                 <div class="contentPlaceholder" style="text-align: center;">
                     <a href="interactiveVisual.html">Link to the interactive
                         visual.</a>
                 </div>
+                <p>In this article i will describe in the detail of the steps i took to create this ThreeJS interactive
+                    visual.</p>
+                <h2>1. Creating the scene</h2>
+                <p>The way i created this interactive visual is first to define the basic components to create the whole
+                    scene such as:</p>
+                <ul>
+                    <li>the scene itself</li>
+                    <li>the camera to see the scene</li>
+                    <li>a renderer to display the scene unto the screen</li>
+                </ul>
+                <div class="contentPlaceholder"><code>
+                        <pre>
+// scene
+var scene = new THREE.Scene();
+
+// camera
+var camera = new THREE.PerspectiveCamera(80, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+// renderer
+var renderer = new THREE.WebGLRenderer({
+antialias: true,
+alpha: true
+});
+renderer.setSize(window.innerWidth, window.innerHeight); //set size of the renderer to window size
+document.body.appendChild(renderer.domElement); //create canvas on the html body
+
+// prism object
+  var geometry1 = new THREE.TetrahedronGeometry(1.5, 0); //object1 geometry
+  var material1 = new THREE.MeshNormalMaterial(); //object1 material
+</pre></code></div>
+                <br />
+                <h2>2. Interactive Controls</h2>
+                <p>Then i use an additional ThreeJS library called OrbitControls to add interactive camera controls for
+                    the user to navigate around the 3D space. Then i also modify a few parameters of the OrbitControls
+                    to make it <em>pan smoothly</em> as the user navigates around.</p>
+                <div class="contentPlaceholder"><code>
+                        <pre>
+// controls
+var controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.autoRotate = true;
+controls.autoRotateSpeed = 1;
+controls.enablePan = true;
+controls.enableZoom = true;
+controls.enableDamping = true;
+controls.dampingFactor = 0.07;
+controls.rotateSpeed = 0.8;
+</pre></code></div>
+                <p>By this point, we would be having a basic scene that the user can navigate around the object.</p>
+                <h2>3. Inheritance Cloner</h2>
+                <p>I wanted to have a very dynamic visuals to fills the whole screen and i spent a lot of time
+                    experimenting in this. From my experience from using 3D software suite such as Cinema 4D and
+                    Blender, i know that 3D object can be 'cloned' using a cloner tool. So with the help of Mr.Chris
+                    Geene i was mentored of how to create an 'inheritance cloner' by creating multiple meshes of the
+                    object using a <code>for-loop</code> then adding each meshes to an object array then to use an
+                    <code>if statement</code> to link every newly created meshes to its predecessor. </p>
+                <div class="contentPlaceholder">
+                    <pre><code>
+// cloner
+var objArray = [];
+for (let i = 0; i <= 16; i++) {
+var meshes = new THREE.Mesh(geometry1, material1);
+meshes.position.set(i - 5, i, i);
+
+if (i == 0) {
+scene.add(meshes);
+var primeMesh = meshes;
+objArray.push(meshes);
+} else {
+primeMesh.add(meshes);
+primeMesh = meshes;
+objArray.push(meshes);
+}
+    }</code></pre>
+                </div>
+
+                <h2>4. Moving the objects based on the 'Golden Ratio'</h2>
+                <p>The last step is to animate the objects, the goal i had in mind is to make the objects move with some
+                    certain <em>flow</em>. So i uses <code>Math.PI</code> to make the objects moves according to the
+                    <em>golden ratio</em>.</p>
+                <div class="contentPlaceholder">
+                    <pre><code>
+function animate() {
+    requestAnimationFrame(animate);
+  
+    controls.update();
+    
+    // golden ratio animation
+    var div = 512;
+    for (var x = 0; x < objArray.length; x++) {
+      objArray[x].rotation.x += Math.PI / 2;
+      objArray[x].rotation.y += Math.PI / 4;
+      objArray[x].rotation.z += Math.PI / 4;
+    }
+  
+    renderer.render(scene, camera);
+};</code></pre>
+                </div>
+                <!-- <p>I have always been intrigued of visuals </p> -->
 
                 <div class="feedback">
                     <h1>Feedback</h1>
