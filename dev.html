@@ -109,7 +109,7 @@ animation: AnimationName 12s ease infinite;">
                 </div>
             </article>-->
             <article>
-                <h2 style="font-size: 40px;margin-bottom: 0;">Interactive Visual Art with ThreeJS</h2>
+                <h2 style="font-size: 40px;margin-bottom: 0;">Interactive ThreeJS Visual Art</h2>
 
                 <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint 2</h1>
 
@@ -121,6 +121,10 @@ animation: AnimationName 12s ease infinite;">
                     visual that is <em>now playing on the background of this site</em> by using ThreeJS web 3D graphics
                     library.</p>
                 <div class="contentPlaceholder" style="text-align: center;">
+                    <video class="contentAttachment" width="1920" height="1080" controls>
+                        <source src="content/interativeVisualPreview.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <a href="interactiveVisual.html">Link to the interactive
                         visual.</a>
                 </div>
@@ -131,7 +135,7 @@ animation: AnimationName 12s ease infinite;">
                     scene such as:</p>
                 <ul>
                     <li>the scene itself</li>
-                    <li>the camera to see the scene</li>
+                    <li>a camera to see the scene</li>
                     <li>a renderer to display the scene unto the screen</li>
                 </ul>
                 <div class="contentPlaceholder"><code>
@@ -156,7 +160,7 @@ document.body.appendChild(renderer.domElement); //create canvas on the html body
 </pre></code></div>
                 <br />
                 <h2>2. Interactive Controls</h2>
-                <p>Then i use an additional ThreeJS library called OrbitControls to add interactive camera controls for
+                <p>Then i use an additional ThreeJS library called OrbitControls.js to add interactive camera controls for
                     the user to navigate around the 3D space. Then i also modify a few parameters of the OrbitControls
                     to make it <em>pan smoothly</em> as the user navigates around.</p>
                 <div class="contentPlaceholder"><code>
@@ -172,9 +176,11 @@ controls.dampingFactor = 0.07;
 controls.rotateSpeed = 0.8;
 </pre></code></div>
                 <p>By this point, we would be having a basic scene that the user can navigate around the object.</p>
+                <br />
+
                 <h2>3. Inheritance Cloner</h2>
                 <p>I wanted to have a very dynamic visuals to fills the whole screen and i spent a lot of time
-                    experimenting in this. From my experience from using 3D software suite such as Cinema 4D and
+                    experimenting on this. From my experience from using 3D software suite such as Cinema 4D and
                     Blender, i know that 3D object can be 'cloned' using a cloner tool. So with the help of Mr.Chris
                     Geene i was mentored of how to create an 'inheritance cloner' by creating multiple meshes of the
                     object using a <code>for-loop</code> then adding each meshes to an object array then to use an
@@ -198,10 +204,10 @@ objArray.push(meshes);
 }
     }</code></pre>
                 </div>
-
-                <h2>4. Moving the objects based on the 'Golden Ratio'</h2>
+<br />
+                <h2>4. Animating the objects to move based of the 'Golden Ratio'</h2>
                 <p>The last step is to animate the objects, the goal i had in mind is to make the objects move with some
-                    certain <em>flow</em>. So i uses <code>Math.PI</code> to make the objects moves according to the
+                    certain <em>flow</em>. So i uses <code>Math.PI</code> to make the objects move according to the
                     <em>golden ratio</em>.</p>
                 <div class="contentPlaceholder">
                     <pre><code>
@@ -258,8 +264,8 @@ function animate() {
     <div id="mySidenav" class="sidenav">
         <a href="index.html">Home</a>
         <a href="dev.html">Development</a>
-        <a href="ux.html">UX</a>
         <a href="sco.html">SCO</a>
+        <a href="ux.html">UX</a>
         <a href="ptm.html">Project</a>
     </div>
 
