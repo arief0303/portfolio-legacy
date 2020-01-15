@@ -6,7 +6,7 @@ $titleSize: 40px;
 // $titleSize: 8vw;
 $headerHeight: 68px;
 $varWidth: 14vw;
-$contentPadding: 2vw 5vw 2vw 5vw;
+$contentPadding: 4vw 5vw 4vw 5vw;
 
 @-webkit-keyframes AnimationName {
     0% {
@@ -278,7 +278,7 @@ embed {
     // z-index: 3;
 
     // flex-direction: row;
-    margin: 0 $headerPadding 0px $headerPadding;
+    margin: 0px $headerPadding 0px $headerPadding;
     padding: $contentPadding;
 
     -webkit-animation: fadein 2s;
