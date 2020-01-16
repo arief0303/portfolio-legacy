@@ -6,7 +6,7 @@ $titleSize: 40px;
 // $titleSize: 8vw;
 $headerHeight: 68px;
 $varWidth: 14vw;
-$contentPadding: 4vw 5vw 4vw 5vw;
+$contentPadding: 4vw 7vw;
 
 @-webkit-keyframes AnimationName {
     0% {
@@ -287,7 +287,7 @@ embed {
     -o-animation: fadein 2s;
     animation: fadein 2s;
 
-    box-shadow: 0px 0px 30px black;
+    box-shadow: 0px 20px 30px black;
 
     background: rgba(255, 255, 255, 0.75);
     color: black;
@@ -331,12 +331,19 @@ embed {
     transition: 1.5s;
 
     margin: 0px $headerPadding 0px $headerPadding;
-    padding: $contentPadding;
+    // padding: $contentPadding;
+    // padding-top: 20px;
     background: rgba(150, 150, 150, 0.75);
     box-shadow: 0px 0px 30px black;
     color: white;
 }
 
+#dividerText {
+    text-align: center;
+    font-size: 40px;
+    // margin: 20px 0px 0px 0px;
+    padding-top: 25px;
+}
 .feedback {
     // display: flex;
     // justify-content: center;
@@ -347,7 +354,10 @@ embed {
     color: white;
 }
 
-#feedbackExpandButton{position: relative; left: 40px;}
+#feedbackExpandButton {
+    position: relative;
+    left: 40px;
+}
 
 .contentPlaceholder {
     // padding: 1px 2padding: 40px;0px 20px;
