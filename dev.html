@@ -109,9 +109,49 @@ animation: AnimationName 12s ease infinite;">
                 </div>
             </article>-->
             <article>
-                <h2 style="font-size: 40px;margin-bottom: 0;">Interactive ThreeJS Visual Art</h2>
-
+                <h2 style="font-size: 40px;margin-bottom:0px;">Intuitive Navigation Bar</h2>
+                <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint 1</h1>
+                <p>The original concept of this portfolio is to have a simple yet intuitive interface. So instead of having a static permanent header, i instead opt to implement a revealing side navigation bar with a 'burger' menu that intuitively changes to a 'cross' when the navigation bar is revealed.</p>
+                <video class="contentAttachment" width="1920" height="1080" controls>
+                    <source src="content/intuitiveNavbar.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="feedback">
+                    <h1>Feedback</h1>
+                    <div class="plus-minus-toggle collapsed"></div>
+                    <p style="display: none;font-style: italic;">No feedback provided yet.</p>
+                </div>
+            </article>
+        </section>
+        <br /><br />
+        <section id="content">
+            <article>
+                <h2 style="font-size: 40px;margin-bottom: 0;">Responsive Web Design</h2>
                 <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint 2</h1>
+                <p>Nowadays people uses many forms of digital devices to open websites. Sometimes you open a website
+                    on
+                    a PC and other times on your personal phone. But when viewing a website on a smaller screen real
+                    estate the website needs to scale accordingly otherwise the elements will clip.
+                </p>
+                <p>In this sprint i have implemented a responsive design to this portofolio. Now it can be viewed
+                    properly on either big or small screen sizes.</p>
+                <video class="contentAttachment" width="1920" height="1080" controls>
+                    <source src="content/rwd_preview.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="feedback">
+                    <h1>Feedback</h1>
+                    <div class="plus-minus-toggle collapsed"></div>
+                    <p style="display: none;font-style: italic;">No feedback provided yet.</p>
+                </div>
+            </article>
+        </section>
+        <br /><br />
+            <section id="content">
+            <article>
+                <h2 style="font-size: 40px;margin-bottom: 0;">Interactive Visual Art with ThreeJS</h2>
+
+                <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint 3</h1>
 
                 <!-- <p>I've always been intrigued on making web graphics visuals</p> -->
                 <!-- <p>As an exercise to sharpen my JavaScript skills. </p> -->
@@ -154,7 +194,7 @@ alpha: true
 renderer.setSize(window.innerWidth, window.innerHeight); //set size of the renderer to window size
 document.body.appendChild(renderer.domElement); //create canvas on the html body
 
-// prism object
+// pyramid object
   var geometry1 = new THREE.TetrahedronGeometry(1.5, 0); //object1 geometry
   var material1 = new THREE.MeshNormalMaterial(); //object1 material
 </pre></code></div>
@@ -163,7 +203,7 @@ document.body.appendChild(renderer.domElement); //create canvas on the html body
                 <p>Then i use an additional ThreeJS library called OrbitControls.js to add interactive camera controls
                     for
                     the user to navigate around the 3D space. Then i also modify a few parameters of the OrbitControls
-                    to make it <em>pan smoothly</em> as the user navigates around.</p>
+                    to make it <em>pan smoothly</em> as the user navigates around the space.</p>
                 <div class="contentPlaceholder"><code>
                         <pre>
 // controls
@@ -176,16 +216,16 @@ controls.enableDamping = true;
 controls.dampingFactor = 0.07;
 controls.rotateSpeed = 0.8;
 </pre></code></div>
-                <p>By this point, we would be having a basic scene that the user can navigate around the object.</p>
+                <!-- <p>By this point, we would be having a basic scene that the user can navigate around the object.</p> -->
                 <br />
 
                 <h2>3. Inheritance Cloner</h2>
-                <p>I wanted to have a very dynamic visuals to fills the whole screen and i spent a lot of time
-                    experimenting on this. From my experience from using 3D software suite such as Cinema 4D and
+                <p>I wanted to have a very dynamic visuals to fill the whole screen and i spent a lot of time
+                    experimenting on this. From my experience from using 3D software suites such as Cinema 4D and
                     Blender, i know that 3D object can be 'cloned' using a cloner tool. So with the help of Mr.Chris
-                    Geene i was mentored of how to create an 'inheritance cloner' by creating multiple meshes of the
-                    object using a <code>for-loop</code> then adding each meshes to an object array then to use an
-                    <code>if statement</code> to link every newly created meshes to its predecessor. </p>
+                    Geene i was mentored of how to create an 'inheritance cloner' by creating multiple meshes(each time in different location according to the index) of the
+                    object using <code>for-loop</code> statement then adding each meshes to an object array then to use an
+                    <code>if statement</code> to 'inherit' every newly created mesh to its predecessor thus mirroring the attributes(such as position and rotation) of the parent. </p>
                 <div class="contentPlaceholder">
                     <pre><code>
 // cloner
@@ -206,7 +246,7 @@ objArray.push(meshes);
     }</code></pre>
                 </div>
                 <br />
-                <h2>4. Animating the objects to move based of the 'Golden Ratio'</h2>
+                <h2>4. Animating the objects to move based on the 'Golden Ratio'</h2>
                 <p>The last step is to animate the objects, the goal i had in mind is to make the objects move(in
                     rotation) with some
                     certain <em>flow</em>. So i used <code>Math.PI</code> to make the objects rotate according to the
@@ -238,29 +278,18 @@ function animate() {
                 </div>
             </article>
         </section>
-            <br /><br />
-            <section id="content">
-            <article>
-                <h2 style="font-size: 40px;margin-bottom: 0;">Responsive Web Design</h2>
-                <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint 3</h1>
-                <p>Nowadays people uses many forms of digital devices to open websites. Sometimes you open a website
-                    on
-                    a PC and other times on your personal phone. But when viewing a website on a smaller screen real
-                    estate the website needs to scale accordingly otherwise the elements will clip.
-                </p>
-                <p>In this sprint i have implemented a responsive design to this portofolio. Now it can be viewed
-                    properly on either big or small screen sizes.</p>
-                <video class="contentAttachment" width="1920" height="1080" controls>
-                    <source src="content/rwd_preview.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="feedback">
-                    <h1>Feedback</h1>
-                    <div class="plus-minus-toggle collapsed"></div>
-                    <p style="display: none;font-style: italic;">No feedback provided yet.</p>
-                </div>
-            </article>
-        </section>
+        <br /><br />
+        <section id="content"><article>
+            <h2 style="font-size: 40px;margin-bottom:0px;">Article Template</h2>
+            <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint X</h1>
+            <p></p>Lorem ipsum dolor sit amet.</p>
+            <div class="contentAttachment" src="content/ConceptingColor.jpg">
+            <div class="feedback">
+                <h1>Feedback</h1>
+                <div class="plus-minus-toggle collapsed"></div>
+                <p style="display: none;font-style: italic;">No feedback provided yet.</p>
+            </div>
+        </article></section>
     </div>
 
 
