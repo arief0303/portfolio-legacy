@@ -110,7 +110,8 @@ animation: AnimationName 12s ease infinite;">
             <article>
                 <h2 style="font-size: 40px;margin-bottom:0px;">Gallery Slideshow</h2>
                 <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint 0</h1>
-                <p>To showcase the photograpghy assignment i did for SCO i have made a gallery slideshow using basic HTML, CSS, and Javascript.</p>
+                <p>To showcase the photograpghy assignment i did for SCO i have made a gallery slideshow using basic
+                    HTML, CSS, and Javascript.</p>
                 <video class="contentAttachment" width="1920" height="1080" controls>
                     <source src="content/gallerySlideshow_preview.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -127,7 +128,7 @@ animation: AnimationName 12s ease infinite;">
         <br />
         <section id="content">
             <article>
-                <h2 style="font-size: 40px;margin-bottom:0px;">Intuitive Navigation Bar</h2>
+                <h2 style="font-size: 40px;margin-bottom:0px;">Intuitive Navigation Bar with SCSS</h2>
                 <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint 1</h1>
                 <p>The original concept of this portfolio is to have a simple yet intuitive interface. So instead of
                     having a static permanent header, i instead opt to implement a revealing side navigation bar with a
@@ -152,13 +153,18 @@ animation: AnimationName 12s ease infinite;">
             <article>
                 <h2 style="font-size: 40px;margin-bottom:0px;">Hide & Reveal Next Element</h2>
                 <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint 2</h1>
-                <p>To simplify the user interface of this site, i have made iteration to the 'Feedback' box to hide and reveal its content.</p>
+                <p>To simplify the user interface of this site, i have made iteration to the 'Feedback' box to hide and
+                    reveal its content.</p>
                 <video class="contentAttachment" width="1920" height="1080" controls>
                     <source src="content/revealNextElement_Preview.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p>This is done by using JavaScript to target the next element(in the DOM) of the 'plus-minus' button using an <code>if</code> statement and changing the <code>display:</code> value in the CSS of the next element to either hide it(<code>display: none</code>) or to show it(<code>display: block</code>).</p>
-                <div class="contentPlaceholder"><pre><code>
+                <p>This is done by using JavaScript to target the next element(in the DOM) of the 'plus-minus' button
+                    using an <code>if</code> statement and changing the <code>display:</code> value in the CSS of the
+                    next element to either hide it(<code>display: none</code>) or to show it(<code>display:
+                        block</code>).</p>
+                <div class="contentPlaceholder">
+                    <pre><code>
 function toggleDocs(event) {
     if (event.target && event.target.className == 'plus-minus-toggle' || event.target && event.target.className == 'plus-minus-toggle collapsed') {
 
@@ -172,8 +178,9 @@ function toggleDocs(event) {
         }
     }
 }
-                </code></pre></div>
-                
+                </code></pre>
+                </div>
+
                 <div class="contentAttachment" src="content/ConceptingColor.jpg">
                     <div class="feedback">
                         <h1>Feedback</h1>
@@ -230,7 +237,9 @@ function toggleDocs(event) {
                 <!-- <p>As an exercise to sharpen my JavaScript skills. </p> -->
                 <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum sit amet purus dignissim
                     accumsan. Suspendisse sed scelerisque massa, vel facilisis justo.</p>-->
-                <p>This was a pet project of mine and in Sprint X with the help of Mr. Chris Geene as my mentor, i have managed to finalize and polish this 'visual art' that i have made using ThreeJS, a JavaScript 3D web graphics library. </p>
+                <p>This was a pet project of mine and in Sprint X with the help of Mr. Chris Geene as my mentor, i have
+                    managed to finalize and polish this 'visual art' that i have made using ThreeJS, a JavaScript 3D web
+                    graphics library. </p>
                 <!-- <p>As part of the process for me to practice my Javascript skills i decided to make an interactive
                     visual that is <em>now playing</em> on the background of this site by using ThreeJS JavaScript web
                     3D graphics
@@ -296,7 +305,8 @@ controls.rotateSpeed = 0.8;
                 <br />
 
                 <h2>3. Inheritance Cloner</h2>
-                <div class="contentPlaceholderHidden"><img style="width: 40%;height: auto;" src="content/inheritanceCloner_Graph.png" alt="Missing file"></div>
+                <div class="contentPlaceholderHidden"><img style="width: 40%;height: auto;"
+                        src="content/inheritanceCloner_Graph.png" alt="Missing file"></div>
                 <p>I wanted to have a very dynamic visuals to fill the whole screen and i spent a lot of time
                     experimenting on this. From my experience from using 3D software suites such as Cinema 4D and
                     Blender, i know that objects can be 'cloned' using a cloner tool. So with the help of Mr.Chris
@@ -327,10 +337,12 @@ objArray.push(meshes);
                 </div>
                 <br />
                 <h2>4. Animating the objects to move based of the 'Golden Ratio'</h2>
-                <div class="contentPlaceholderHidden"><img style="width: 75%;height: auto;" class="contentAttachment" src="content/1200px-Fibonacci_spiral_34.svg.png" alt="Missing file"></div>
+                <div class="contentPlaceholderHidden"><img style="width: 75%;height: auto;" class="contentAttachment"
+                        src="content/1200px-Fibonacci_spiral_34.svg.png" alt="Missing file"></div>
                 <p>The last step is to animate the objects, the goal i had in mind is to make the objects move(in
                     rotation) with some
-                    certain <em>flow</em>. So i used <code>Math.PI</code> to make the objects move on the circumference of a circle according to the
+                    certain <em>flow</em>. So i used <code>Math.PI</code> to make the objects move on the circumference
+                    of a circle according to the
                     <em>golden ratio</em>.</p>
                 <div class="contentPlaceholder">
                     <pre><code>
@@ -364,11 +376,11 @@ function animate() {
     <!-- OFF-CANVAS MENU____________________________________________________________________________________________________________ -->
     <div id="mySidenav" class="sidenav">
         <a href="index.html">Home</a>
-        <a href="dev.html">Development</a>
-        <a href="sco.html">SCO</a>
-        <a href="ux.html">UX</a>
-        <a href="ptm.html">Project</a>
         <a href="sprintX.html">Sprint X</a>
+        <a href="ptm.html">Project</a>
+        <a href="dev.html">Development</a>
+        <a href="ux.html">UX</a>
+        <a href="sco.html">SCO</a>
     </div>
 
     <!-- SCRIPT SOURCES____________________________________________________________________________________________________________ -->
