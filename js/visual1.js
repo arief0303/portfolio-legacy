@@ -17,17 +17,8 @@ var renderer = new THREE.WebGLRenderer({
   // camera
   var camera = new THREE.PerspectiveCamera(80, window.innerWidth / window.innerHeight, 0.1, 1000);
   
-  // controls
-  var controls = new THREE.OrbitControls(camera, renderer.domElement);
-  controls.autoRotate = true;
-  controls.autoRotateSpeed = 1;
-  controls.enablePan = true;
-  controls.enableZoom = true;
-  controls.enableDamping = true;
-  // controls.minPolarAngle = 0.8;
-  // controls.maxPolarAngle = 0.4;
-  controls.dampingFactor = 0.07;
-  controls.rotateSpeed = 0.8;
+ 
+  
   
   
   // manual camera adjust
