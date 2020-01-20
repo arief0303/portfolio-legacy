@@ -25,32 +25,6 @@ hamburger.addEventListener("click", function () {
   }
 });
 
-var curScroll = 0;
-
-function controlScroll (e) {
-    var evt = window.event || e;
-    var delta = evt.detail? evt.detail*(-120) : evt.wheelDelta;
-    if(delta < 0) {
-        //scroll down
-        curScroll += 25;
-    }
-    else {
-        //scroll up
-        curScroll -= 25;
-    }
-    document.getElementById('content').scrollTop = curScroll;
-    console.log(document.getElementById('content').scrollTop);
-    
-}; 
-
-if (document.attachEvent) {//if IE (and Opera depending on user setting)
-    document.attachEvent("onmousewheel", controlScroll)
-        
-}
-else if (document.addEventListener) { //WC3 browsers
-    document.addEventListener("mousewheel", controlScroll, false)
-}
-
 //Plus minus toggle script
 $(function() {
     $('.plus-minus-toggle').on('click', function() {
@@ -75,25 +49,7 @@ $(function() {
 
 document.addEventListener('click', toggleDocs, true);
 
-  /*function plusMinusToggle() {
-    var x = document.getElementById("plus-minus-toggle collapsed");
-
-}*/
-
-/*
-var curScroll = 0;
-
-$(window).bind('mousewheel DOMMouseScroll', function(e){
-    var evt = window.event || e;
-    var delta = evt.detail? evt.detail*(-120) : evt.wheelDelta;
-    if(delta < 0) {
-        //scroll down
-        curScroll += 20;
-    }
-    else {
-        //scroll up
-        curScroll -= 20;
-    }
-    $('#content').scrollTop(curScroll);
-    return true;
-}); */
+//goback method
+function goBack() {
+  window.history.back();
+}
