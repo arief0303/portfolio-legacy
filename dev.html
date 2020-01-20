@@ -110,14 +110,16 @@ animation: AnimationName 12s ease infinite;">
             <article>
                 <h2 style="font-size: 40px;margin-bottom:0px;">Gallery Slideshow</h2>
                 <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint 0</h1>
-                <p>To showcase the photograpghy assignment i did for SCO wanted to make a gallery slideshow.</p>
-                <p> This POC is a perfect opportunity to start learning web development from scratch and with a guidance from w3school i have managed to create this gallery slideshow.</p>
+                <p>To showcase the photograpghy assignment i did for SCO, I wanted to make a gallery slideshow.</p>
+                <p> This POC is a perfect opportunity for me to start learning web development from scratch and with a guidance
+                    from <a href="https://www.w3schools.com/howto/howto_js_slideshow.asp">w3school.com</a> i have managed to
+                    create this gallery slideshow.</p>
                 <div class="contentPlaceholder" style="text-align: center;">
-                <video class="contentAttachment" width="1920" height="1080" controls>
-                    <source src="content/gallerySlideshow_preview.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video><br /><br />
-                <a class="btn" href="https://www.w3schools.com/howto/howto_js_slideshow.asp">Tutorial on w3schools</a>
+                    <video class="contentAttachment" width="1920" height="1080" controls>
+                        <source src="content/gallerySlideshow_preview.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video><br /><br />
+                    <a class="btn" href="sco.html">SCO page</a>
                 </div>
                 <div class="contentAttachment" src="content/ConceptingColor.jpg">
                     <div class="feedback">
@@ -240,8 +242,9 @@ function toggleDocs(event) {
                 <!-- <p>As an exercise to sharpen my JavaScript skills. </p> -->
                 <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum sit amet purus dignissim
                     accumsan. Suspendisse sed scelerisque massa, vel facilisis justo.</p>-->
-                <p>This was a pet project of mine and in Sprint X with the help of Mr. Chris Geene as my mentor, i have
-                    managed to finalize and polish this interactive visual art that i made using ThreeJS, a JavaScript 3D web
+                <p>This was a pet project of mine as i always was interested in creative coding and in Sprint X with the help of Mr. Chris Geene as my mentor, i have
+                    managed to finalize and polish this interactive visual art that i made using ThreeJS, a JavaScript
+                    3D web
                     graphics library. </p>
                 <!-- <p>As part of the process for me to practice my Javascript skills i decided to make an interactive
                     visual that is <em>now playing</em> on the background of this site by using ThreeJS JavaScript web
@@ -287,7 +290,8 @@ document.body.appendChild(renderer.domElement); //create canvas on the html body
                 <p>Then i use an additional ThreeJS library module called OrbitControls.js to add interactive camera
                     controls
                     for
-                    the user to navigate around the 3D space by either using a mouse or touch control. Then i also modify a few parameters to add damping so that
+                    the user to navigate around the 3D space by either using a mouse or touch control. Then i also
+                    modify a few parameters to add damping so that
                     the camera will <em>pan smoothly</em> as the user navigates around the space.</p>
                 <div class="contentPlaceholder"><code>
                         <pre>
@@ -303,24 +307,28 @@ controls.rotateSpeed = 0.8;
 </pre></code></div>
                 <!-- <p>By this point, we would be having a basic scene that the user can navigate around the object.</p> -->
                 <br />
-                <h2>3.  Objects</h2>
-                <p>At this point, we would be having an empty scene that we can navigate around. So we can start filling it with objects.</p>
+                <h2>3. Objects</h2>
+                <p>At this point, we would be having an empty scene that we can navigate around. So we can start filling
+                    it with objects.</p>
                 <p>To create an object we need three basic components, such as:</p>
                 <ul>
                     <li>a geometry to define its shape</li>
                     <li>a texture</li>
                     <li>and a mesh to combine the texture and geometry</li>
                 </ul>
-                <div class="contentPlaceholder"><pre><code>
+                <div class="contentPlaceholder">
+                    <pre><code>
 // pyramid object
 var geometry1 = new THREE.TetrahedronGeometry(1.5, 0); //object1 geometry
 var material1 = new THREE.MeshNormalMaterial(); //object1 material
 //var mesh = new.THREE.Mesh(geometry1, material1); //Mesh should have been defined here but instead i put it in the cloner
-                </code></pre></div>
-<br />
+                </code></pre>
+                </div>
+                <br />
                 <h2>4. Inheritance Cloner</h2>
                 <div class="contentPlaceholderHidden"><img style="width: 40%;height: auto;"
                         src="content/inheritanceCloner_Graph.png" alt="Missing file"></div>
+                        <br />
                 <p>I wanted to have a very dynamic visuals to fill the whole screen and i spent a lot of time
                     experimenting on this. From my experience from using 3D software suites such as Cinema 4D and
                     Blender, i know that objects can be 'cloned' using a cloner tool. So with the help of Mr.Chris

@@ -365,11 +365,15 @@ button:focus {
     animation: fadein 1s;
     transition: 2s;
 
-    margin: 0px $headerPadding 0px $headerPadding;
+    margin: 0px $headerPadding;
     padding: $contentPadding;
     background: rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 30px black;
     color: white;
+}
+
+#aboutMe{
+    margin: 0px $contentPadding 40px $contentPadding;
 }
 
 .contentDivider {
@@ -571,6 +575,7 @@ footer {
     #content,
     #learningOutcome,
     #title,
+    #aboutMe,
     .contentDivider,
     .titleText {
         margin: 0px;
