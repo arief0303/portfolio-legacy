@@ -37,8 +37,9 @@ floatMaterial = new THREE.PointsMaterial({
 var floaty = new THREE.Points(floatGeo, floatMaterial)
 scene.add(floaty);
 // camera
-var camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 1000);
-//var camera = new THREE.OrthographicCamera(window.innerWidth / -2, 4 / 2, 4 / 2,  window.innerHeight / -2, 1, 1000);
+var camera = new THREE.PerspectiveCamera(20, window.innerWidth / window.innerHeight, 0.1, 1000);
+// var camera = new THREE.OrthographicCamera(window.innerWidth / -2, 4 / 2, 4 / 2,  window.innerHeight / -2, 1, 1000);
+
 //ambient light
 ambient = new THREE.AmbientLight(0x555555);
 scene.add(ambient);
@@ -49,7 +50,7 @@ scene.add(directionalLight);
 // controls
 var controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.autoRotate = true;
-controls.autoRotateSpeed = 1;
+controls.autoRotateSpeed = 0.25;
 controls.enablePan = true;
 controls.enableZoom = true;
 controls.enableDamping = true;
@@ -60,7 +61,9 @@ controls.rotateSpeed = 0.8;
 
 
 // manual camera adjust
-camera.position.set(64, -32,-256);
+camera.position.set(64, -32,-256); //for perpective
+//camera.position.set(512, 512, -512); //for orto
+
 controls.update(); //controls.update() must be called after any manual changes to the camera's transform
 
 // object1
@@ -71,9 +74,7 @@ var material1 = new THREE.MeshNormalMaterial(); //object1 material
 
 var geometry = new THREE.BoxBufferGeometry(10, 10, 10);
 for (var i = 0; i < 2000; i++) {
-  var object = new THREE.Mesh(geometry1, new THREE.MeshNormalMaterial({
-    color: Math.random() * 0xffffff
-  }));
+  var object = new THREE.Mesh(geometry1, material1);
   object.position.x = Math.random() * 800 - 400;
   object.position.y = Math.random() * 800 - 400;
   object.position.z = Math.random() * 800 - 400;
@@ -106,15 +107,16 @@ for (let i = 0; i <= 64; i++) {
   }
 }
 
-// auto resize canvas by listening to window resize event
+// animate function
+function animate() {
+
+  // auto resize canvas by listening to window resize event
 window.addEventListener('resize', () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
 })
 
-// animate function
-function animate() {
   requestAnimationFrame(animate);
 
   controls.update(); //controls.update() must be called after any manual changes to the camera's transform
@@ -131,5 +133,3 @@ function animate() {
 };
 
 animate();
-
-console.log(scene);
