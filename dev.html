@@ -144,7 +144,7 @@ animation: AnimationName 12s ease infinite;">
                     <div class="plus-minus-toggle collapsed"></div>
                     <p style="display: none;font-style: italic;">I managed to learn SCSS within a week after asking Erik
                         of its
-                        functionality as i find it to be a very useful tool.</p>
+                        functionality and i find its added funtionality to be a very useful tool .</p>
                 </div>
             </article>
         </section>
@@ -238,7 +238,7 @@ function toggleDocs(event) {
                 <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum sit amet purus dignissim
                     accumsan. Suspendisse sed scelerisque massa, vel facilisis justo.</p>-->
                 <p>This was a pet project of mine and in Sprint X with the help of Mr. Chris Geene as my mentor, i have
-                    managed to finalize and polish this 'visual art' that i have made using ThreeJS, a JavaScript 3D web
+                    managed to finalize and polish this interactive visual art that i made using ThreeJS, a JavaScript 3D web
                     graphics library. </p>
                 <!-- <p>As part of the process for me to practice my Javascript skills i decided to make an interactive
                     visual that is <em>now playing</em> on the background of this site by using ThreeJS JavaScript web
@@ -249,14 +249,15 @@ function toggleDocs(event) {
                         <source src="content/interativeVisualPreview.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <a href="interactiveVisual.html">Link to the interactive
+                    <br /><br />
+                    <a class="btn" href="interactiveVisual.html">Link to the interactive
                         visual.</a>
                 </div>
                 <p>In this article i will describe in the detail of the steps i took to create this ThreeJS interactive
                     visual.</p>
                 <h2>1. Creating the scene</h2>
-                <p>The way i created this interactive visual is first to define the basic components to create the whole
-                    scene such as:</p>
+                <p>The way i created this interactive visual is first to define the basic components to create the
+                    scene, such as:</p>
                 <ul>
                     <li>the scene itself</li>
                     <li>a camera to see the scene</li>
@@ -277,17 +278,13 @@ alpha: true
 });
 renderer.setSize(window.innerWidth, window.innerHeight); //set size of the renderer to window size
 document.body.appendChild(renderer.domElement); //create canvas on the html body
-
-// pyramid object
-  var geometry1 = new THREE.TetrahedronGeometry(1.5, 0); //object1 geometry
-  var material1 = new THREE.MeshNormalMaterial(); //object1 material
 </pre></code></div>
                 <br />
                 <h2>2. Interactive Controls</h2>
                 <p>Then i use an additional ThreeJS library module called OrbitControls.js to add interactive camera
                     controls
                     for
-                    the user to navigate around the 3D space. Then i also modify a few parameters to add damping so that
+                    the user to navigate around the 3D space by either using a mouse or touch control. Then i also modify a few parameters to add damping so that
                     the camera will <em>pan smoothly</em> as the user navigates around the space.</p>
                 <div class="contentPlaceholder"><code>
                         <pre>
@@ -303,8 +300,22 @@ controls.rotateSpeed = 0.8;
 </pre></code></div>
                 <!-- <p>By this point, we would be having a basic scene that the user can navigate around the object.</p> -->
                 <br />
-
-                <h2>3. Inheritance Cloner</h2>
+                <h2>3.  Objects</h2>
+                <p>At this point, we would be having an empty scene that we can navigate around. So we can start filling it with objects.</p>
+                <p>To create an object we need three basic components, such as:</p>
+                <ul>
+                    <li>a geometry to define its shape</li>
+                    <li>a texture</li>
+                    <li>and a mesh to combine the texture and geometry</li>
+                </ul>
+                <div class="contentPlaceholder"><pre><code>
+// pyramid object
+var geometry1 = new THREE.TetrahedronGeometry(1.5, 0); //object1 geometry
+var material1 = new THREE.MeshNormalMaterial(); //object1 material
+//var mesh = new.THREE.Mesh(geometry1, material1); //Mesh should have been defined here but instead i put it in the cloner
+                </code></pre></div>
+<br />
+                <h2>4. Inheritance Cloner</h2>
                 <div class="contentPlaceholderHidden"><img style="width: 40%;height: auto;"
                         src="content/inheritanceCloner_Graph.png" alt="Missing file"></div>
                 <p>I wanted to have a very dynamic visuals to fill the whole screen and i spent a lot of time
@@ -336,7 +347,7 @@ objArray.push(meshes);
     }</code></pre>
                 </div>
                 <br />
-                <h2>4. Animating the objects to move based of the 'Golden Ratio'</h2>
+                <h2>5. Animating the objects to move based on the 'Golden Ratio'</h2>
                 <div class="contentPlaceholderHidden"><img style="width: 75%;height: auto;" class="contentAttachment"
                         src="content/1200px-Fibonacci_spiral_34.svg.png" alt="Missing file"></div>
                 <p>The last step is to animate the objects, the goal i had in mind is to make the objects move(in
@@ -351,7 +362,7 @@ function animate() {
   
     controls.update();
     
-    // golden ratio animation
+    // golden ratio anim
     for (var x = 0; x < objArray.length; x++) {
       objArray[x].rotation.x += Math.PI / 2;
       objArray[x].rotation.y += Math.PI / 4;
@@ -377,8 +388,8 @@ function animate() {
     <div id="mySidenav" class="sidenav">
         <a href="index.html">Home</a>
         <a href="sprintX.html">Sprint X</a>
-        <a href="ptm.html">Project</a>
         <a href="dev.html">Development</a>
+        <a href="ptm.html">Project</a>
         <a href="ux.html">UX</a>
         <a href="sco.html">SCO</a>
     </div>
