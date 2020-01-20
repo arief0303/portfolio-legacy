@@ -1706,6 +1706,16 @@ embed {
   margin: 10px 0px 10px;
 }
 
+.contentPlaceholderHidden {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px 25px;
+}
+
 .feedbackThumbnail {
   height: 40px;
   width: 40px;
