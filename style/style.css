@@ -1887,7 +1887,6 @@ footer {
 #main {
   -webkit-transition: margin-left .5s;
   transition: margin-left .5s;
-  /* padding: 20px; */
 }
 
 @media only screen and (max-width: 40em) {
