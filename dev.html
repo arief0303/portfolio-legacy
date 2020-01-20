@@ -108,28 +108,89 @@ animation: AnimationName 12s ease infinite;">
                 </div>
             </article>-->
             <article>
+                <h2 style="font-size: 40px;margin-bottom:0px;">Gallery Slideshow</h2>
+                <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint 0</h1>
+                <p>To showcase the photograpghy assignment i did for SCO i have made a gallery slideshow using basic HTML, CSS, and Javascript.</p>
+                <video class="contentAttachment" width="1920" height="1080" controls>
+                    <source src="content/gallerySlideshow_preview.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="contentAttachment" src="content/ConceptingColor.jpg">
+                    <div class="feedback">
+                        <h1>Feedback</h1>
+                        <div class="plus-minus-toggle collapsed"></div>
+                        <p style="display: none;font-style: italic;">No feedback provided yet.</p>
+                    </div>
+            </article>
+        </section>
+        <br />
+        <br />
+        <section id="content">
+            <article>
                 <h2 style="font-size: 40px;margin-bottom:0px;">Intuitive Navigation Bar</h2>
                 <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint 1</h1>
-                <p>The original concept of this portfolio is to have a simple yet intuitive interface. So instead of having a static permanent header, i instead opt to implement a revealing side navigation bar with a 'burger' menu that intuitively changes to a 'cross' when the navigation bar is revealed.</p>
+                <p>The original concept of this portfolio is to have a simple yet intuitive interface. So instead of
+                    having a static permanent header, i instead opt to implement a revealing side navigation bar with a
+                    'burger' menu that intuitively changes to a 'cross' when the navigation bar is revealed.</p>
                 <video class="contentAttachment" width="1920" height="1080" controls>
                     <source src="content/intuitiveNavbar.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p>In the process of implementing this POC, i needed to learn a CSS pre-processor in order to manipulate the burger menu so i've had learnt on how to use SCSS from this exercise.</p>
+                <p>In the process of implementing this POC, i needed to learn a CSS pre-processor in order to manipulate
+                    the burger menu so i've had learnt on how to use SCSS from this exercise.</p>
                 <div class="feedback">
                     <h1>Feedback</h1>
                     <div class="plus-minus-toggle collapsed"></div>
-                    <p style="display: none;font-style: italic;">No feedback provided yet.</p>
+                    <p style="display: none;font-style: italic;">I managed to learn SCSS within a week after asking Erik
+                        of its
+                        functionality as i find it to be a very useful tool.</p>
                 </div>
-            </article></section>
+            </article>
+        </section>
+        <br /><br />
+        <section id="content">
+            <article>
+                <h2 style="font-size: 40px;margin-bottom:0px;">Hide & Reveal Next Element</h2>
+                <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint 2</h1>
+                <p>To simplify the user interface of this site, i have made iteration to the 'Feedback' box to hide and reveal its content.</p>
+                <video class="contentAttachment" width="1920" height="1080" controls>
+                    <source src="content/revealNextElement_Preview.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>This is done by using JavaScript to target the next element(in the DOM) of the 'plus-minus' button using an <code>if</code> statement and changing the <code>display:</code> value in the CSS of the next element to either hide it(<code>display: none</code>) or to show it(<code>display: block</code>).</p>
+                <div class="contentPlaceholder"><pre><code>
+function toggleDocs(event) {
+    if (event.target && event.target.className == 'plus-minus-toggle' || event.target && event.target.className == 'plus-minus-toggle collapsed') {
+
+        var next = event.target.nextElementSibling;
+
+        if (next.style.display == "none") {
+            next.style.display = "block";
+
+        } else {
+            next.style.display = "none";
+        }
+    }
+}
+                </code></pre></div>
+                
+                <div class="contentAttachment" src="content/ConceptingColor.jpg">
+                    <div class="feedback">
+                        <h1>Feedback</h1>
+                        <div class="plus-minus-toggle collapsed"></div>
+                        <p style="display: none;font-style: italic;">No feedback provided yet.</p>
+                    </div>
+            </article>
+        </section>
         <br /><br />
         <section id="content">
             <article>
                 <h2 style="font-size: 40px;margin-bottom: 0;">Responsive Web Design</h2>
-                <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint 2</h1>
+                <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint 3</h1>
                 <!-- <p>Nowadays people uses many forms of digital devices to open websites. Sometimes you open a website
                     on
-                    a PC and other times on your personal phone. But</p>--> <p>When viewing a website on a smaller screen real 
+                    a PC and other times on your personal phone. But</p>-->
+                <p>When viewing a website on a smaller screen real
                     estate the website needs to scale accordingly otherwise the elements will clip.
                 </p>
                 <p>In this sprint i have implemented a responsive design to this portofolio. Now it can be viewed
@@ -138,15 +199,19 @@ animation: AnimationName 12s ease infinite;">
                     <source src="content/rwd_preview.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p>Implementing this POC is relatively simple as it only took only took a few lines of CSS condition code to tell the browser to resize accordingly depending on the screen size.</p>
-                <div class="contentPlaceholder"><pre><code>
+                <p>Implementing this POC is relatively simple as it only took only took a few lines of CSS condition
+                    code to tell the browser to resize accordingly depending on the screen size.</p>
+                <div class="contentPlaceholder">
+                    <pre><code>
 @media only screen and (max-width: 40em) {
     .content {
         margin: 0px;
     }
 }
-                </code></pre></div>
-                <p>Even though the syntax is simple, i needed to redesign the interface to fit accordingly so i have to make adjustment to the <code>.content</code> class to fit block-level element.</p>
+                </code></pre>
+                </div>
+                <p>Even though the syntax is simple, i needed to redesign the interface to fit accordingly so i have to
+                    make adjustment to the <code>.content</code> class to fit block-level elements.</p>
                 <div class="feedback">
                     <h1>Feedback</h1>
                     <div class="plus-minus-toggle collapsed"></div>
@@ -155,19 +220,21 @@ animation: AnimationName 12s ease infinite;">
             </article>
         </section>
         <br /><br />
-            <section id="content">
+        <section id="content">
             <article>
                 <h2 style="font-size: 40px;margin-bottom: 0;">Interactive Visual Art with ThreeJS</h2>
 
-                <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint 3</h1>
+                <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint X</h1>
 
                 <!-- <p>I've always been intrigued on making web graphics visuals</p> -->
                 <!-- <p>As an exercise to sharpen my JavaScript skills. </p> -->
                 <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum sit amet purus dignissim
                     accumsan. Suspendisse sed scelerisque massa, vel facilisis justo.</p>-->
-                <p>As part of the process for me to practice my Javascript skills i decided to make an interactive
-                    visual that is <em>now playing</em> on the background of this site by using ThreeJS JavaScript web 3D graphics
-                    library.</p>
+                <p>This is a pet project of mine and in Sprint X i have managed to finalize and polish this 'visual art' that i have made using ThreeJS, a JavaScript 3D web graphics library. </p>
+                <!-- <p>As part of the process for me to practice my Javascript skills i decided to make an interactive
+                    visual that is <em>now playing</em> on the background of this site by using ThreeJS JavaScript web
+                    3D graphics
+                    library.</p> -->
                 <div class="contentPlaceholder" style="text-align: center;">
                     <video class="contentAttachment" width="1920" height="1080" controls>
                         <source src="content/interativeVisualPreview.mp4" type="video/mp4">
@@ -208,9 +275,11 @@ document.body.appendChild(renderer.domElement); //create canvas on the html body
 </pre></code></div>
                 <br />
                 <h2>2. Interactive Controls</h2>
-                <p>Then i use an additional ThreeJS library module called OrbitControls.js to add interactive camera controls
+                <p>Then i use an additional ThreeJS library module called OrbitControls.js to add interactive camera
+                    controls
                     for
-                    the user to navigate around the 3D space. Then i also modify a few parameters to add damping so that the camera will <em>pan smoothly</em> as the user navigates around the space.</p>
+                    the user to navigate around the 3D space. Then i also modify a few parameters to add damping so that
+                    the camera will <em>pan smoothly</em> as the user navigates around the space.</p>
                 <div class="contentPlaceholder"><code>
                         <pre>
 // controls
@@ -230,9 +299,12 @@ controls.rotateSpeed = 0.8;
                 <p>I wanted to have a very dynamic visuals to fill the whole screen and i spent a lot of time
                     experimenting on this. From my experience from using 3D software suites such as Cinema 4D and
                     Blender, i know that objects can be 'cloned' using a cloner tool. So with the help of Mr.Chris
-                    Geene i was mentored on how to create an 'inheritance cloner' by creating multiple meshes(each time in slightly different location according to the index) of the
-                    object using <code>for-loop</code> statement then adding each meshes to an object array then to use an
-                    <code>if</code> statement to 'inherit' every newly created mesh to its predecessor thus mirroring the attributes(such as position and rotation) of the parent. </p>
+                    Geene i was mentored on how to create an 'inheritance cloner' by creating multiple meshes(each time
+                    in slightly different location according to the index) of the
+                    object using <code>for-loop</code> statement then adding each meshes to an object array then to use
+                    an
+                    <code>if</code> statement to 'inherit' every newly created mesh to its predecessor thus mirroring
+                    the attributes(such as position and rotation) of the parent. </p>
                 <div class="contentPlaceholder">
                     <pre><code>
 // cloner
@@ -284,18 +356,20 @@ function animate() {
                 </div>
             </article>
         </section>
-        <br /><br />
-        <section id="content"><article>
-            <h2 style="font-size: 40px;margin-bottom:0px;">Article Template</h2>
-            <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint X</h1>
-            <p></p>Lorem ipsum dolor sit amet.</p>
-            <div class="contentAttachment" src="content/ConceptingColor.jpg">
-            <div class="feedback">
-                <h1>Feedback</h1>
-                <div class="plus-minus-toggle collapsed"></div>
-                <p style="display: none;font-style: italic;">No feedback provided yet.</p>
-            </div>
-        </article></section>
+        <!-- <br /><br /> -->
+        <!--<section id="content">
+            <article>
+                <h2 style="font-size: 40px;margin-bottom:0px;">Article Template</h2>
+                <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint X</h1>
+                <p></p>Lorem ipsum dolor sit amet.</p>
+                <div class="contentAttachment" src="content/ConceptingColor.jpg">
+                    <div class="feedback">
+                        <h1>Feedback</h1>
+                        <div class="plus-minus-toggle collapsed"></div>
+                        <p style="display: none;font-style: italic;">No feedback provided yet.</p>
+                    </div>
+            </article>
+        </section>-->
     </div>
 
 

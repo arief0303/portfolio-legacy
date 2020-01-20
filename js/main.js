@@ -59,7 +59,6 @@ $(function() {
   });
 
   function toggleDocs(event) {
-
     if (event.target && event.target.className == 'plus-minus-toggle' || event.target && event.target.className == 'plus-minus-toggle collapsed') {
 
         var next = event.target.nextElementSibling;
