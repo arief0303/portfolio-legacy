@@ -38,7 +38,7 @@ var scene = new THREE.Scene();
 // scene.add(floaty);
 
 // camera
-var camera = new THREE.PerspectiveCamera(20, window.innerWidth / window.innerHeight, 0.1, 1000);
+var camera = new THREE.PerspectiveCamera(15, window.innerWidth / window.innerHeight, 0.1, 3000);
 // var camera = new THREE.OrthographicCamera(window.innerWidth / -2, 4 / 2, 4 / 2,  window.innerHeight / -2, 1, 1000);
 
 //ambient light
@@ -62,7 +62,7 @@ controls.rotateSpeed = 0.8;
 
 
 // manual camera adjust
-camera.position.set(64, -32,-256); //for perpective
+camera.position.set(0, 0, 400); //for perpective
 //camera.position.set(512, 512, -512); //for orto
 
 controls.update(); //controls.update() must be called after any manual changes to the camera's transform
@@ -72,23 +72,6 @@ var TetrahedronGeometry = new THREE.TetrahedronGeometry(5, 0); //object1 geometr
 var material1 = new THREE.MeshNormalMaterial(); //object1 material
 // var mesh1 = new THREE.Mesh(geometry1, material1); //object1 mesh
 // scene.add(mesh1); //add object1 to scene
-var TetrahedronGeometry_2 = new THREE.TetrahedronGeometry(8, 3);
-var geometry = new THREE.BoxBufferGeometry(10, 10, 10);
-var test = [];
-for (var i = 0; i < 2000; i++) {
-  var object = new THREE.Mesh(TetrahedronGeometry, material1);
-  object.position.x = Math.random() * 800 - 400;
-  object.position.y = Math.random() * 800 - 400;
-  object.position.z = Math.random() * 800 - 400;
-  object.rotation.x = Math.random() * 2 * Math.PI;
-  object.rotation.y = Math.random() * 2 * Math.PI;
-  object.rotation.z = Math.random() * 2 * Math.PI;
- object.scale.x = Math.random() + 0.5;
- object.scale.y = Math.random() + 0.5;
-  object.scale.z = Math.random() + 0.5;
-  scene.add(object);
-  test.push(object)
-}
 
 // cloner
 var objArray = [];
@@ -110,15 +93,30 @@ for (let i = 0; i <= 64; i++) {
   }
 }
 
+//particle cloner
+for (var i = 0; i < 1024; i++) {
+  var object = new THREE.Mesh(TetrahedronGeometry, material1);
+  object.position.x = Math.random() * 1024 - 512;
+  object.position.y = Math.random() * 1024 - 512;
+  object.position.z = Math.random() * 1024 - 512;
+  object.rotation.x = Math.random() * 2 * Math.PI;
+  object.rotation.y = Math.random() * 2 * Math.PI;
+  object.rotation.z = Math.random() * 2 * Math.PI;
+  object.scale.x = Math.random() + 0.5;
+  object.scale.y = Math.random() + 0.5;
+  object.scale.z = Math.random() + 0.5;
+  scene.add(object);
+}
+
 // animate function
 function animate() {
 
   // auto resize canvas by listening to window resize event
-window.addEventListener('resize', () => {
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-})
+  window.addEventListener('resize', () => {
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+  })
 
   requestAnimationFrame(animate);
 
@@ -132,7 +130,7 @@ window.addEventListener('resize', () => {
     objArray[x].rotation.z += Math.PI / (div * 8);
   }
 
- 
+
   renderer.render(scene, camera);
 };
 

@@ -111,15 +111,17 @@ animation: AnimationName 12s ease infinite;">
                 <h2 style="font-size: 40px;margin-bottom:0px;">Gallery Slideshow</h2>
                 <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint 0</h1>
                 <p>To showcase the photograpghy assignment i did for SCO, I wanted to make a gallery slideshow.</p>
-                <p> This POC is a perfect opportunity for me to start learning web development from scratch and with a guidance
-                    from <a href="https://www.w3schools.com/howto/howto_js_slideshow.asp">w3school.com</a> i have managed to
+                <p> This POC is a perfect opportunity for me to start learning web development from scratch and with a
+                    guidance
+                    from <a href="https://www.w3schools.com/howto/howto_js_slideshow.asp">w3school.com</a> i have
+                    managed to
                     create this gallery slideshow.</p>
                 <div class="contentPlaceholder" style="text-align: center;">
                     <video class="contentAttachment" width="1920" height="1080" controls>
                         <source src="content/gallerySlideshow_preview.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video><br /><br />
-                    <a class="btn" href="sco.html">SCO page</a>
+                    <a class="btn" href="sco.html">Link to SCO page</a>
                 </div>
                 <div class="contentAttachment" src="content/ConceptingColor.jpg">
                     <div class="feedback">
@@ -143,7 +145,7 @@ animation: AnimationName 12s ease infinite;">
                     Your browser does not support the video tag.
                 </video>
                 <p>In the process of implementing this POC, i needed to learn a CSS pre-processor in order to manipulate
-                    the burger menu so i've had learnt on how to use SCSS from this exercise.</p>
+                    the burger menu so i've had learnt on how to use SCSS from this exercise which is very useful.</p>
                 <div class="feedback">
                     <h1>Feedback</h1>
                     <div class="plus-minus-toggle collapsed"></div>
@@ -222,8 +224,8 @@ function toggleDocs(event) {
 }
                 </code></pre>
                 </div>
-                <p>Even though the syntax is simple, i needed to redesign the interface to fit accordingly so i have to
-                    make adjustment to the <code>.content</code> class to fit block-level elements.</p>
+                <!-- <p>Even though the syntax is simple, i needed to redesign the interface to fit accordingly so i have to
+                     make adjustment to the <code>.content</code> class to fit block-level elements.</p> -->
                 <div class="feedback">
                     <h1>Feedback</h1>
                     <div class="plus-minus-toggle collapsed"></div>
@@ -242,7 +244,8 @@ function toggleDocs(event) {
                 <!-- <p>As an exercise to sharpen my JavaScript skills. </p> -->
                 <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum sit amet purus dignissim
                     accumsan. Suspendisse sed scelerisque massa, vel facilisis justo.</p>-->
-                <p>This was a pet project of mine as i always was interested in creative coding and in Sprint X with the help of Mr. Chris Geene as my mentor, i have
+                <p>This was a pet project of mine as i always was interested in creative coding and in Sprint X with the
+                    help of Mr. Chris Geene as my mentor, i have
                     managed to finalize and polish this interactive visual art that i made using ThreeJS, a JavaScript
                     3D web
                     graphics library. </p>
@@ -251,22 +254,23 @@ function toggleDocs(event) {
                     3D graphics
                     library.</p> -->
                 <div class="contentPlaceholder" style="text-align: center;">
-                    <video class="contentAttachment" width="1920" height="1080" controls>
+                    <!--<video class="contentAttachment" width="1920" height="1080" controls>
                         <source src="content/interativeVisualPreview.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <br /><br />
+                    <br /><br />-->
                     <a class="btn" href="interactiveVisual.html">Link to the interactive
                         visual.</a>
                 </div>
-                <p>In this article i will describe in the detail of the steps i took to create this ThreeJS interactive
+                <p>In this article i will describe in detail of the steps i took to create this ThreeJS interactive
                     visual.</p>
-                <h2>1. Creating the scene</h2>
-                <p>The way i created this interactive visual is first to define the basic components to create the
-                    scene, such as:</p>
+                <br />
+                <h2>1. Creating the blank canvas</h2>
+                <p>We need a few basic components to create the
+                    canvas, such as:</p>
                 <ul>
-                    <li>the scene itself</li>
-                    <li>a camera to see the scene</li>
+                    <li>the scene</li>
+                    <li>a camera to see the viewable scene</li>
                     <li>a renderer to display the scene unto the canvas</li>
                 </ul>
                 <div class="contentPlaceholder"><code>
@@ -285,8 +289,27 @@ alpha: true
 renderer.setSize(window.innerWidth, window.innerHeight); //set size of the renderer to window size
 document.body.appendChild(renderer.domElement); //create canvas on the html body
 </pre></code></div>
+                <!-- <p>By this point, we would be having a basic scene that the user can navigate around the object.</p> -->
                 <br />
-                <h2>2. Interactive Controls</h2>
+                <h2>2. Objects</h2>
+                <p>The next step
+                    is to fill the blank canvas with objects.</p>
+                <p>To create an object we need three basic components, such as:</p>
+                <ul>
+                    <li>a geometry to define its shape</li>
+                    <li>a texture</li>
+                    <li>and a mesh to combine the texture and geometry</li>
+                </ul>
+                <div class="contentPlaceholder">
+                    <pre><code>
+// pyramid object
+var geometry1 = new THREE.TetrahedronGeometry(1.5, 0); //object1 geometry
+var material1 = new THREE.MeshNormalMaterial(); //object1 material
+//var mesh = new.THREE.Mesh(geometry1, material1); //Mesh can be defined here but instead i put it in the cloner
+                </code></pre>
+                </div>
+                <br />
+                <h2>3. Interactive Controls</h2>
                 <p>Then i use an additional ThreeJS library module called OrbitControls.js to add interactive camera
                     controls
                     for
@@ -305,30 +328,11 @@ controls.enableDamping = true;
 controls.dampingFactor = 0.07;
 controls.rotateSpeed = 0.8;
 </pre></code></div>
-                <!-- <p>By this point, we would be having a basic scene that the user can navigate around the object.</p> -->
-                <br />
-                <h2>3. Objects</h2>
-                <p>At this point, we would be having an empty scene that we can navigate around. So we can start filling
-                    it with objects.</p>
-                <p>To create an object we need three basic components, such as:</p>
-                <ul>
-                    <li>a geometry to define its shape</li>
-                    <li>a texture</li>
-                    <li>and a mesh to combine the texture and geometry</li>
-                </ul>
-                <div class="contentPlaceholder">
-                    <pre><code>
-// pyramid object
-var geometry1 = new THREE.TetrahedronGeometry(1.5, 0); //object1 geometry
-var material1 = new THREE.MeshNormalMaterial(); //object1 material
-//var mesh = new.THREE.Mesh(geometry1, material1); //Mesh should have been defined here but instead i put it in the cloner
-                </code></pre>
-                </div>
                 <br />
                 <h2>4. Inheritance Cloner</h2>
                 <div class="contentPlaceholderHidden"><img style="width: 40%;height: auto;"
                         src="content/inheritanceCloner_Graph.png" alt="Missing file"></div>
-                        <br />
+                <br />
                 <p>I wanted to have a very dynamic visuals to fill the whole screen and i spent a lot of time
                     experimenting on this. From my experience from using 3D software suites such as Cinema 4D and
                     Blender, i know that objects can be 'cloned' using a cloner tool. So with the help of Mr.Chris
@@ -346,6 +350,7 @@ for (let i = 0; i <= 16; i++) {
 var meshes = new THREE.Mesh(geometry1, material1);
 meshes.position.set(i - 5, i, i);
 
+//inheritance link
 if (i == 0) {
 scene.add(meshes);
 var primeMesh = meshes;
@@ -358,10 +363,10 @@ objArray.push(meshes);
     }</code></pre>
                 </div>
                 <br />
-                <h2>5. Animating the objects to move based on the 'Golden Ratio'</h2>
+                <h2>5. Animation based on the 'Golden Ratio'</h2>
                 <div class="contentPlaceholderHidden"><img style="width: 75%;height: auto;" class="contentAttachment"
                         src="content/1200px-Fibonacci_spiral_34.svg.png" alt="Missing file"></div>
-                <p>The last step is to animate the objects, the goal i had in mind is to make the objects move(in
+                <p>The goal i had in mind is to make the objects move(in
                     rotation) with some
                     certain <em>flow</em>. So i used <code>Math.PI</code> to make the objects move on the circumference
                     of a circle according to the
@@ -383,8 +388,31 @@ function animate() {
     renderer.render(scene, camera);
 };</code></pre>
                 </div>
-                <!-- <p>I have always been intrigued of visuals </p> -->
-
+                <br />
+                <h3>6. Particle Cloner</h3>
+                <p>I wanted something to fill in the rest of the empty spaces so then i asked Mr. Chris again on how to
+                    achieve this effect and he mentioned that i could reuse the cloner code to make a particle cloner
+                    then i introduce
+                    <code>Math.random()</code> method to randomly generate the objects to fill the rest of the empty
+                    spaces complimenting the motion sculpture.</p>
+                <div class="contentPlaceholder">
+                    <pre><code>
+//particle cloner
+for (var i = 0; i < 1024; i++) {
+  var object = new THREE.Mesh(TetrahedronGeometry, material1);
+  object.position.x = Math.random() * 1024 - 512;
+  object.position.y = Math.random() * 1024 - 512;
+  object.position.z = Math.random() * 1024 - 512;
+  object.rotation.x = Math.random() * 2 * Math.PI;
+  object.rotation.y = Math.random() * 2 * Math.PI;
+  object.rotation.z = Math.random() * 2 * Math.PI;
+  object.scale.x = Math.random() + 0.5;
+  object.scale.y = Math.random() + 0.5;
+  object.scale.z = Math.random() + 0.5;
+  scene.add(object);
+}
+                    </code></pre>
+                </div>
                 <div class="feedback">
                     <h1>Feedback</h1>
                     <div class="plus-minus-toggle collapsed"></div>
