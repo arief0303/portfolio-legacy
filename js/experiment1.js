@@ -62,13 +62,13 @@ controls.rotateSpeed = 0.8;
 
 
 // manual camera adjust
-camera.position.set(0, 0, 400); //for perpective
+camera.position.set(0, 0, -550); //for perpective
 //camera.position.set(512, 512, -512); //for orto
 
 controls.update(); //controls.update() must be called after any manual changes to the camera's transform
 
 // object1
-var TetrahedronGeometry = new THREE.TetrahedronGeometry(5, 0); //object1 geometry
+var TetrahedronGeometry = new THREE.TetrahedronGeometry(7, 0); //object1 geometry
 var material1 = new THREE.MeshNormalMaterial(); //object1 material
 // var mesh1 = new THREE.Mesh(geometry1, material1); //object1 mesh
 // scene.add(mesh1); //add object1 to scene
@@ -102,9 +102,9 @@ for (var i = 0; i < 1024; i++) {
   object.rotation.x = Math.random() * 2 * Math.PI;
   object.rotation.y = Math.random() * 2 * Math.PI;
   object.rotation.z = Math.random() * 2 * Math.PI;
-  object.scale.x = Math.random() + 0.5;
-  object.scale.y = Math.random() + 0.5;
-  object.scale.z = Math.random() + 0.5;
+  // object.scale.x = Math.random() + 0.5;
+  // object.scale.y = Math.random() + 0.5;
+  // object.scale.z = Math.random() + 0.5;
   scene.add(object);
 }
 
