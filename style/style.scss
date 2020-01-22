@@ -240,21 +240,6 @@ embed {
     box-shadow: none;
 }
 
-#about {
-    // centre horizontally & vertically
-    position: absolute;
-    left: 75%;
-    top: 75%;
-    -webkit-transform: translate(-75%, -75%);
-    transform: translate(-75%, -75%);
-
-    margin: 0;
-    position: fixed;
-    background: none;
-    color: white;
-    box-shadow: none;
-}
-
 #title {
     -webkit-animation: fadein 1s;
     -moz-animation: fadein 1s;
