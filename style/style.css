@@ -1619,6 +1619,20 @@ embed {
           box-shadow: none;
 }
 
+#about {
+  position: absolute;
+  left: 75%;
+  top: 75%;
+  -webkit-transform: translate(-75%, -75%);
+  transform: translate(-75%, -75%);
+  margin: 0;
+  position: fixed;
+  background: none;
+  color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 #title {
   -webkit-animation: fadein 1s;
   animation: fadein 1s;
@@ -1638,7 +1652,6 @@ embed {
 
 .titleText {
   margin: 25px;
-  font-size: 1px;
 }
 
 .btn {
@@ -1677,8 +1690,9 @@ embed {
 .btn:active,
 .btnContrast:hover,
 .btnContrast:active {
-  color: #fff;
-  background: #000;
+  color: #000;
+  background: #fff;
+  border-color: #fff;
 }
 
 button:focus {
@@ -1897,6 +1911,9 @@ footer {
   .contentDivider,
   .titleText {
     margin: 0px;
+  }
+  .titleText {
+    font-size: 14vw;
   }
 }
 

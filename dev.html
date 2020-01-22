@@ -30,7 +30,7 @@ animation: AnimationName 12s ease infinite;">
         <iframe class="visualiframe" src="visual1.html" frameborder="0" style="position: fixed;"></iframe>
 
         <div id="title">
-            <h2 id="titleText">Development</h1>
+            <h2 class="titleText">Development</h1>
         </div>
         <br /><br />
         <div id="learningOutcome">
@@ -140,18 +140,20 @@ animation: AnimationName 12s ease infinite;">
                 <p>The original concept of this portfolio is to have a simple yet intuitive interface. So instead of
                     having a static permanent header, i instead opt to implement a revealing side navigation bar with a
                     'burger' menu that intuitively changes to a 'cross' when the navigation bar is revealed.</p>
+                <p>In the process of implementing this POC, i needed to learn a CSS pre-processor in order to manipulate
+                    the burger menu so i've had learnt on how to use SCSS from this exercise.</p>
                 <video class="contentAttachment" width="1920" height="1080" controls>
                     <source src="content/intuitiveNavbar.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p>In the process of implementing this POC, i needed to learn a CSS pre-processor in order to manipulate
-                    the burger menu so i've had learnt on how to use SCSS from this exercise which is very useful.</p>
                 <div class="feedback">
                     <h1>Feedback</h1>
                     <div class="plus-minus-toggle"></div>
-                    <p style="display: block;font-style: italic;">I managed to learn SCSS within a week after asking Erik
+                    <p style="display: block;font-style: italic;">I managed to learn SCSS within a week after asking
+                        Erik
                         of its
-                        functionality and i find its features(such being able to define variables, importing additional CSS, and other) to be very useful.</p>
+                        functionality and i find its features(such being able to define variables, importing additional
+                        CSS, and other) to be very useful.</p>
                 </div>
             </article>
         </section>
@@ -244,6 +246,9 @@ function toggleDocs(event) {
                 <!-- <p>As an exercise to sharpen my JavaScript skills. </p> -->
                 <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum sit amet purus dignissim
                     accumsan. Suspendisse sed scelerisque massa, vel facilisis justo.</p>-->
+                <p>This interactive visual aims to provide an immersive
+                    dive into an abstract universe featuring the "solar squid" motion sculpture and randomly generated
+                    "star" particles.</p>
                 <p>This was a pet project of mine as i always was interested in creative coding and in Sprint X with the
                     help of Mr. Chris Geene as my mentor, i have
                     managed to finalize and polish this interactive visual art that i made using ThreeJS, a JavaScript
@@ -329,7 +334,7 @@ controls.dampingFactor = 0.07;
 controls.rotateSpeed = 0.8;
 </pre></code></div>
                 <br />
-                <h2>4. Inheritance Cloner</h2>
+                <h2>4. Making The 'Solar Squid' Motion Sculpture with Inheritance Cloner</h2>
                 <div class="contentPlaceholderHidden"><img style="width: 40%;height: auto;"
                         src="content/inheritanceCloner_Graph.png" alt="Missing file"></div>
                 <br />
@@ -363,14 +368,17 @@ objArray.push(meshes);
     }</code></pre>
                 </div>
                 <br />
-                <h2>5. Animation based on the 'Golden Ratio'</h2>
+                <h2>5. Animating The 'Solar Squid' Motion Sculpture Based on The 'Golden Ratio'</h2>
                 <div class="contentPlaceholderHidden"><img style="width: 85%;height: auto;" class="contentAttachment"
                         src="content/1200px-Fibonacci_spiral_34.svg.png" alt="Missing file"></div>
                 <p>The goal i had in mind is to make the objects move(in
                     rotation) with some
-                    certain <em>flow</em>. So i used <code>Math.PI</code> to make the objects move on the circumference
-                    of a circle according to the
-                    <em>golden ratio</em>.</p>
+                    certain <em>flow</em>. Then i got inspired by nature on how would a galaxy and solar system would
+                    revolve according to the Golden Ratio. The Golden Ratio is most often found in nature's reoccurring
+                    organizational patterns like spirals, hierarchies, concentric geometries, and radial patterns. </p>
+                <p>So i used <code>Math.PI</code> as it correlates closely to the Golden Ratio in the
+                    <code>animate()</code> loop function to make the objects move accordingly creating a beautiful
+                    motion based on nature itself.</p>
                 <div class="contentPlaceholder">
                     <pre><code>
 function animate() {
@@ -380,16 +388,16 @@ function animate() {
     
     // golden ratio anim
     for (var x = 0; x < objArray.length; x++) {
-      objArray[x].rotation.x += Math.PI / 2;
-      objArray[x].rotation.y += Math.PI / 4;
-      objArray[x].rotation.z += Math.PI / 4;
+      objArray[x].rotation.x += Math.PI;
+      objArray[x].rotation.y += Math.PI;
+      objArray[x].rotation.z += Math.PI;
     }
   
     renderer.render(scene, camera);
 };</code></pre>
                 </div>
                 <br />
-                <h3>6. Particle Cloner</h3>
+                <h2>6. Making The 'Star' Particle with Random Cloner</h2>
                 <p>I wanted something to fill in the rest of the empty spaces so then i asked Mr. Chris again on how to
                     achieve this effect and he mentioned that i could reuse the cloner code to make a particle cloner
                     then i introduce

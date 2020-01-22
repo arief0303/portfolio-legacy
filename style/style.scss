@@ -240,6 +240,21 @@ embed {
     box-shadow: none;
 }
 
+#about {
+    // centre horizontally & vertically
+    position: absolute;
+    left: 75%;
+    top: 75%;
+    -webkit-transform: translate(-75%, -75%);
+    transform: translate(-75%, -75%);
+
+    margin: 0;
+    position: fixed;
+    background: none;
+    color: white;
+    box-shadow: none;
+}
+
 #title {
     -webkit-animation: fadein 1s;
     -moz-animation: fadein 1s;
@@ -265,7 +280,7 @@ embed {
 
 .titleText {
     margin: 25px;
-    font-size: 1px;
+    // font-size: 1px;
 }
 
 .btn{
@@ -310,8 +325,9 @@ embed {
 .btn:active,
 .btnContrast:hover,
 .btnContrast:active {
-	color: #fff;
-	background: #000;
+	color: #000;
+    background: #fff;
+    border-color: #fff;
 }
 
 button:focus {
@@ -580,6 +596,8 @@ footer {
     .titleText {
         margin: 0px;
     }
+
+    .titleText{font-size: 14vw;}
 }
 
 .plus-minus-toggle {
