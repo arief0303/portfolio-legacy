@@ -35,7 +35,8 @@ animation: AnimationName 12s ease infinite;">
         <br /><br />
         <section id="content">
             <article>
-                <h2 style="font-size: 40px;margin-bottom: 0;text-align: center;">An Interactive Visual Art Made With ThreeJS
+                <h2 style="font-size: 40px;margin-bottom: 0;text-align: center;">An Interactive Visual Art Made With
+                    ThreeJS
                 </h2>
                 <!-- <h1 style="font-style: italic;margin: 0px 0px 0px 0px;">Sprint X</h1> -->
 
@@ -44,9 +45,10 @@ animation: AnimationName 12s ease infinite;">
                 <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum sit amet purus dignissim
                     accumsan. Suspendisse sed scelerisque massa, vel facilisis justo.</p>-->
                 <h2 style="text-align: center; font-style: italic;">This interactive visual aims to provide an immersive
-                    dive into an abstract universe featuring the "solar squid" motion sculpture and randomly generated
-                    "star" particles.</h2>
-                
+                    dive into an abstract universe featuring the "Solar Squid" motion sculpture that moves beautifully
+                    according to the 'Golden Ratio' & randomly generated
+                    "Star" particles.</h2>
+
                 <!-- <p>As part of the process for me to practice my Javascript skills i decided to make an interactive
                     visual that is <em>now playing</em> on the background of this site by using ThreeJS JavaScript web
                     3D graphics
@@ -149,7 +151,7 @@ controls.rotateSpeed = 0.8;
                     <pre><code>
 // cloner
 var objArray = [];
-for (let i = 0; i <= 16; i++) {
+for (let i = 0; i <= 64; i++) {
 var meshes = new THREE.Mesh(geometry1, material1);
 meshes.position.set(i - 5, i, i);
 
@@ -204,7 +206,7 @@ function animate() {
                 <div class="contentPlaceholder">
                     <pre><code>
 //particle cloner
-for (var i = 0; i < 1024; i++) {
+for (var i = 0; i < 512; i++) {
   var object = new THREE.Mesh(TetrahedronGeometry, material1);
   object.position.x = Math.random() * 1024 - 512;
   object.position.y = Math.random() * 1024 - 512;
@@ -221,8 +223,13 @@ for (var i = 0; i < 1024; i++) {
                 </div>
                 <div class="feedback">
                     <h1>Feedback</h1>
-                    <div class="plus-minus-toggle collapsed"></div>
-                    <p style="display: none;font-style: italic;">No feedback provided yet.</p>
+                    <div class="plus-minus-toggle"></div>
+                    <p style="display: block;font-style: italic;">Feedback from Erik: I received a very positive
+                        feedback for Development and the only question that remains is what would the future holds?(and
+                        i already have some answers from the visions i have to become a much better creative
+                        coder)<br /><br />Feedback from Chris Geene: I am able to grasp the concept of using
+                        <code>for-loops</code> statements to create objects and manipulate the movements of the objects.
+                        The next step is to to take to another whole new level.</p>
                 </div>
             </article>
         </section>
