@@ -50,6 +50,43 @@ $contentPadding: 4vw 7vw 8vw;
     }
 }
 
+@-webkit-keyframes pulse {
+    from {
+        background-color: #fff;
+        -webkit-box-shadow: 0 0 9px #00f;
+    }
+
+    50% {
+        background-color: #fff;
+        -webkit-box-shadow: 0 0 18px #fff;
+    }
+
+    to {
+        background-color: #fff;
+        -webkit-box-shadow: 0 0 9px #00f;
+    }
+}
+
+
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 -10px #fff;
+    }
+
+    40% {
+        box-shadow: 0 0 20px #fff;
+    }
+
+    60% {
+        box-shadow: 0 0 20px #fff;
+    }
+
+    100% {
+        box-shadow: 0 0 -10px #fff;
+    }
+}
+
+
 @keyframes AnimationName {
     0% {
         background-position: 88% 0%
@@ -144,23 +181,23 @@ $contentPadding: 4vw 7vw 8vw;
 /* Opera < 12.1 */
 @-o-keyframes fadeintoright {}
 
-@keyframes glowing {
-    0% {
-        color: rgba(255, 255, 255, 0.5)
-    }
+// @keyframes glowing {
+//     0% {
+//         color: rgba(255, 255, 255, 0.5)
+//     }
 
-    40% {
-        color: rgba(255, 255, 255, 1);
-    }
+//     40% {
+//         color: rgba(255, 255, 255, 1);
+//     }
 
-    60% {
-        color: rgba(255, 255, 255, 1);
-    }
+//     60% {
+//         color: rgba(255, 255, 255, 1);
+//     }
 
-    100% {
-        color: rgba(255, 255, 255, 0.5);
-    }
-}
+//     100% {
+//         color: rgba(255, 255, 255, 0.5);
+//     }
+// }
 
 // ________________________________________________________________________________________________________________________
 
@@ -268,7 +305,7 @@ embed {
     // font-size: 1px;
 }
 
-.btn{
+.btn {
     font-family: inherit;
     font-size: inherit;
     background: none;
@@ -285,7 +322,27 @@ embed {
     transition: all 0.3s;
 }
 
-.btnContrast{
+.btn-glow {
+    font-family: inherit;
+    font-size: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 10px 10px;
+    // margin: 15px 30px;
+    // text-transform: uppercase;
+    // letter-spacing: 1.2px;
+    // font-weight: 700;
+    outline: none;
+    border-radius: 50px;
+    border: 2px solid #000;
+    color: #000;
+    // transition: all 0.3s;
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.btnContrast {
     font-family: inherit;
     font-size: inherit;
     background: none;
@@ -303,21 +360,26 @@ embed {
 }
 
 .btn a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .btn:hover,
 .btn:active,
 .btnContrast:hover,
-.btnContrast:active {
-	color: #000;
+.btnContrast:active,
+.btn-glow,
+.btn-glow:active,
+.btn-glow:hover {
+    color: #000;
     background: #fff;
     border-color: #fff;
 }
 
 button:focus {
-    outline:0;
+    outline: 0;
 }
+
+
 
 #content {
     // height: 200px;
@@ -373,7 +435,7 @@ button:focus {
     color: white;
 }
 
-#aboutMe{
+#aboutMe {
     margin: 0px $contentPadding 40px $contentPadding;
 }
 
@@ -399,6 +461,7 @@ button:focus {
     // margin: 20px 0px 0px 0px;
     padding-top: 25px;
 }
+
 .feedback {
     // display: flex;
     // justify-content: center;
@@ -452,7 +515,7 @@ button:focus {
     // right: 50%;
     // margin-left: -50vw;
     // margin-right: -50vw;
-    
+
     width: 300%;
     max-width: 100%;
     height: auto;
@@ -582,7 +645,9 @@ footer {
         margin: 0px;
     }
 
-    .titleText{font-size: 14vw;}
+    .titleText {
+        font-size: 14vw;
+    }
 }
 
 .plus-minus-toggle {
