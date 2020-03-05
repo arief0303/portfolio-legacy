@@ -78,7 +78,7 @@
 
 			// MARCHING CUBES
 
-			resolution = 28;
+			resolution = 48;
 
 			effect = new MarchingCubes( resolution, materials[ current_material ].m, true, true );
 			effect.position.set( 0, 0, 0 );
@@ -109,7 +109,7 @@
 			// STATS
 
 			stats = new Stats();
-			container.appendChild( stats.dom );
+			//container.appendChild( stats.dom );
 
 			// GUI
 
@@ -287,7 +287,7 @@
 
 				speed: 0.25,
 				numBlobs: 40,
-				resolution: 15,
+				resolution: 48,
 				isolation: 80,
 
 				floor: false,

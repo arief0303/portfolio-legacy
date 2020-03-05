@@ -1,6 +1,4 @@
 {
-  "name": "pwaTestApp",
-  "short_name": "testApp",
   "theme_color": "#000000",
   "background_color": "#000000",
   "display": "fullscreen",
