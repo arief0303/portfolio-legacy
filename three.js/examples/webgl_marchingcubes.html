@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>three.js webgl - marching cubes</title>
 	<meta charset="utf-8">
@@ -56,7 +57,7 @@
 			// SCENE
 
 			scene = new THREE.Scene();
-			scene.background = new THREE.Color( 0x050505 );
+			//scene.background = new THREE.Color( 0xffffff );
 
 			// LIGHTS
 
@@ -91,10 +92,13 @@
 
 			// RENDERER
 
-			renderer = new THREE.WebGLRenderer();
-			renderer.outputEncoding = THREE.sRGBEncoding;
+			renderer = new THREE.WebGLRenderer(
+  			{alpha: true});
+			//renderer.outputEncoding = THREE.sRGBEncoding;
 			renderer.setPixelRatio( window.devicePixelRatio );
 			renderer.setSize( window.innerWidth, window.innerHeight );
+			renderer.setClearColor(0x000000, 0) //set renderer color to alpha
+
 
 			renderer.domElement.style.position = "absolute";
 			renderer.domElement.style.top = "0px";
@@ -136,7 +140,7 @@
 
 			// environment map
 
-			var path = "textures/cube/Vindelalnden/";
+			var path = "textures/cube/Vindelalven/";
 			var format = '.jpg';
 			var urls = [
 				path + 'px' + format, path + 'nx' + format,
@@ -276,9 +280,7 @@
 
 					effect.enableUvs = ( current_material === "textured" ) ? true : false;
 					effect.enableColors = ( current_material === "colors" || current_material === "multiColors" ) ? true : false;
-
-				};
-
+				};		
 			};
 
 			effectController = {
@@ -361,7 +363,8 @@
 			h.add( effectController, "floor" );
 			h.add( effectController, "wallx" );
 			h.add( effectController, "wallz" );
-
+		
+			GUI.toggleHide();
 		}
 
 		// this controls content of marching cubes voxel field
@@ -416,8 +419,7 @@
 			requestAnimationFrame( animate );
 
 			render();
-			stats.update();
-
+			//stats.update();
 		}
 
 		function render() {
@@ -465,10 +467,9 @@
 			// render
 
 			renderer.render( scene, camera );
-
 		}
-
 </script>
 
 </body>
+
 </html>
