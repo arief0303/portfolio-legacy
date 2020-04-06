@@ -1,3 +1,11 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501, 
+    "liveServer.settings.root": "/",
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.https": {
+        "enable": true,
+        "cert": "C:/Users/arief/OneDrive - Office 365 Fontys/FONTYS/SEM4/pwa/https/localhost.pem",
+        "key": "C:/Users/arief/OneDrive - Office 365 Fontys/FONTYS/SEM4/pwa/https/localhost.key",
+        "passphrase": "12345"
+    }
 }

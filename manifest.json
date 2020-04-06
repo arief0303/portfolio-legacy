@@ -1,9 +1,11 @@
 {
+  "name": "portfolioApp",
+  "short_name": "portfolio",
   "theme_color": "#000000",
-  "background_color": "#000000",
+  "background_color": "#ffffff",
   "display": "fullscreen",
   "Scope": "/",
-  "start_url": "/",
+  "start_url": "/index.html",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
